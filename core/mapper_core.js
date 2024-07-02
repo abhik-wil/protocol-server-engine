@@ -2,7 +2,9 @@ const { v4: uuidv4 } = require("uuid");
 const logger = require("../utils/logger").init();
 
 const buildTags = (tags) => {
-  tags= JSON.parse(tags)
+  if(typeof tags === 'string'){
+    tags = JSON.parse(tags)
+  }
   return Object.keys(tags).map((key) => {
     const subObject = tags[key];
 
@@ -76,7 +78,40 @@ const createPayload = (config, action, data, session) => {
   const newTranscationId = uuidv4();
 
   config.map((item) => {
+
     try {
+
+      if(item.loop){
+        if(Array.isArray(eval(item.value))){
+          if(item.value.includes("||")){ // handle || (OR) case
+              let flag = false
+              const splitValue = item.value.split("||")
+              for(const value of splitValue){
+                  if(flag)continue
+                  if(Array.isArray(eval(value))){
+                    item.value = value // update item.value = whichever || condition is array
+                    flag = true
+                  }
+              }
+          }
+
+          eval(item.value).forEach((element,index)=>{
+            // update indexes for each iteration
+            const currentValue = `${item.value}[${index}]${item.beckn_key.split('[index]')[1]}`
+            const currentBecknkey = item.beckn_key.replace('index',index) 
+            
+              createNestedField(
+                payload,
+                currentBecknkey,
+                item.compute ? eval(item.compute) : eval(currentValue)
+              );
+          })
+          return
+
+        }
+      }
+
+
       if (eval(item.value) && (item.check ? eval(item.check) : true))
         createNestedField(
           payload,

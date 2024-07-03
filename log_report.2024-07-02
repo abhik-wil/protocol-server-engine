@@ -1,0 +1,436 @@
+[2024-07-02T11:00:29.371Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T11:00:30.226Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T11:00:30.227Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T11:00:30.227Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T11:00:30.236Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T11:00:36.716Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T11:00:36.723Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T11:00:36.728Z] [[32minfo[39m]: data.name          ||  session.loan_provider.name is undefined, will not be mapping that
+[2024-07-02T11:00:36.856Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T11:00:37.380Z] [[31merror[39m]: {"errors":[{"message":"must be array","details":"/message/catalog/providers"}],"status":"fail"}
+[2024-07-02T11:00:37.381Z] [[31merror[39m]: Schema validation : FAIL
+[2024-07-02T11:00:37.381Z] [[31merror[39m]: b9aaecca-10b7-4d19-b640-b047a7c62196
+[2024-07-02T11:02:12.994Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T11:02:13.778Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T11:02:13.779Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T11:02:13.779Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T11:02:13.787Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T11:02:33.042Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T11:02:33.046Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T11:02:33.048Z] [[32minfo[39m]: data.name          ||  session.loan_provider.name is undefined, will not be mapping that
+[2024-07-02T11:02:33.201Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T11:02:33.778Z] [[31merror[39m]: {"errors":[{"message":"must be array","details":"/message/catalog/providers"}],"status":"fail"}
+[2024-07-02T11:02:33.779Z] [[31merror[39m]: Schema validation : FAIL
+[2024-07-02T11:02:33.779Z] [[31merror[39m]: b9aaecca-10b7-4d19-b640-b047a7c62196
+[2024-07-02T11:04:17.414Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T11:04:18.096Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T11:04:18.097Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T11:04:18.097Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T11:04:18.101Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T11:04:49.722Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T11:04:49.729Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T11:04:49.732Z] [[32minfo[39m]: data.name          ||  session.loan_provider.name is undefined, will not be mapping that
+[2024-07-02T11:04:49.873Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T11:04:50.535Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T11:04:50.537Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T11:04:50.537Z] [[32minfo[39m]: Recieved request: {"bap_id":"bap.credit.becknprotocol.io","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","timestamp":"2024-07-02T11:04:49.726Z","domain":"ONDC:FIS12","version":"2.1.0","ttl":"PT10M","action":"on_search"}
+[2024-07-02T11:04:53.820Z] [[32minfo[39m]: mode::::::::: ASYNC
+[2024-07-02T11:06:10.618Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T11:06:11.421Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T11:06:11.422Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T11:06:11.422Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T11:06:11.430Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T11:06:15.824Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T11:06:15.827Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T11:06:15.830Z] [[32minfo[39m]: data.name          ||  session.loan_provider.name is undefined, will not be mapping that
+[2024-07-02T11:06:15.968Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T11:06:16.457Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T11:06:16.458Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T11:06:16.458Z] [[32minfo[39m]: Recieved request: {"bap_id":"bap.credit.becknprotocol.io","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","timestamp":"2024-07-02T11:06:15.826Z","domain":"ONDC:FIS12","version":"2.1.0","ttl":"PT10M","action":"on_search"}
+[2024-07-02T11:06:16.493Z] [[32minfo[39m]: mode::::::::: ASYNC
+[2024-07-02T11:09:13.180Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T11:09:13.943Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T11:09:13.944Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T11:09:13.944Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T11:09:13.950Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T11:09:22.114Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T11:09:22.118Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T11:09:22.277Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T11:09:22.853Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T11:09:22.853Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T11:09:22.854Z] [[32minfo[39m]: Recieved request: {"bap_id":"bap.credit.becknprotocol.io","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","timestamp":"2024-07-02T11:09:22.116Z","domain":"ONDC:FIS12","version":"2.1.0","ttl":"PT10M","action":"on_search"}
+[2024-07-02T11:09:22.885Z] [[32minfo[39m]: mode::::::::: ASYNC
+[2024-07-02T11:10:36.141Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T11:10:36.881Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T11:10:36.882Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T11:10:36.883Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T11:10:36.891Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T11:10:45.959Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T11:10:45.962Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T11:10:45.967Z] [[32minfo[39m]: data.paymentTagsSearch       || session.paymentTagsSearch is undefined, will not be mapping that
+[2024-07-02T11:10:46.106Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T11:10:46.651Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T11:10:46.652Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T11:10:46.652Z] [[32minfo[39m]: Recieved request: {"bap_id":"bap.credit.becknprotocol.io","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","timestamp":"2024-07-02T11:10:45.961Z","domain":"ONDC:FIS12","version":"2.1.0","ttl":"PT10M","action":"on_search"}
+[2024-07-02T11:10:46.684Z] [[32minfo[39m]: mode::::::::: ASYNC
+[2024-07-02T11:11:27.720Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T11:11:28.532Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T11:11:28.532Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T11:11:28.533Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T11:11:28.541Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T11:11:39.316Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T11:11:39.322Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T11:11:39.326Z] [[32minfo[39m]: data.paymentTagsSearch       || session.paymentTagsSearch is undefined, will not be mapping that
+[2024-07-02T11:11:39.441Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T11:11:40.131Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T11:11:40.132Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T11:11:40.132Z] [[32minfo[39m]: Recieved request: {"bap_id":"bap.credit.becknprotocol.io","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","timestamp":"2024-07-02T11:11:39.320Z","domain":"ONDC:FIS12","version":"2.1.0","ttl":"PT10M","action":"on_search"}
+[2024-07-02T11:11:40.161Z] [[32minfo[39m]: mode::::::::: ASYNC
+[2024-07-02T11:13:15.649Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T11:13:16.413Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T11:13:16.414Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T11:13:16.415Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T11:13:16.423Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T11:13:18.288Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T11:17:19.723Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T11:17:23.164Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T11:17:24.023Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T11:17:24.024Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T11:17:24.024Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T11:17:24.208Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T11:17:27.500Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T11:18:11.694Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T11:18:12.528Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T11:18:12.529Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T11:18:12.530Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T11:18:12.538Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T11:18:14.645Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T11:18:14.648Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T11:18:20.840Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T11:18:21.465Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T11:18:21.466Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T11:18:21.467Z] [[32minfo[39m]: Recieved request: {"bap_id":"bap.credit.becknprotocol.io","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","timestamp":"2024-07-02T11:18:14.647Z","domain":"ONDC:FIS12","version":"2.1.0","ttl":"PT10M","action":"on_search"}
+[2024-07-02T11:18:21.501Z] [[32minfo[39m]: mode::::::::: ASYNC
+[2024-07-02T11:19:43.860Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T11:19:44.832Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T11:19:44.833Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T11:19:44.834Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T11:19:44.842Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T11:19:46.386Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T11:19:46.389Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T11:21:04.434Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T11:21:05.059Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T11:21:05.060Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T11:21:05.061Z] [[32minfo[39m]: Recieved request: {"bap_id":"bap.credit.becknprotocol.io","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","timestamp":"2024-07-02T11:19:46.388Z","domain":"ONDC:FIS12","version":"2.1.0","ttl":"PT10M","action":"on_search"}
+[2024-07-02T11:21:05.092Z] [[32minfo[39m]: mode::::::::: ASYNC
+[2024-07-02T11:25:12.769Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T11:25:13.514Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T11:25:13.515Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T11:25:13.515Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T11:25:13.530Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T11:25:15.011Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T11:25:15.015Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T11:25:18.044Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T11:25:18.585Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T11:25:18.586Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T11:25:18.587Z] [[32minfo[39m]: Recieved request: {"bap_id":"bap.credit.becknprotocol.io","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bpp_id":"mybppid","bpp_uri":"https://mybpp_uri","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","timestamp":"2024-07-02T11:25:15.013Z","domain":"ONDC:FIS12","version":"2.1.0","ttl":"PT10M","action":"on_search"}
+[2024-07-02T11:25:18.621Z] [[32minfo[39m]: mode::::::::: ASYNC
+[2024-07-02T11:27:41.482Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T11:27:42.254Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T11:27:42.255Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T11:27:42.255Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T11:27:42.264Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T11:27:43.826Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T11:27:43.829Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T11:27:44.029Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T11:27:45.148Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T11:27:45.149Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T11:27:45.149Z] [[32minfo[39m]: Recieved request: {"bap_id":"bap.credit.becknprotocol.io","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bpp_id":"mybppid","bpp_uri":"https://mybpp_uri","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","timestamp":"2024-07-02T11:27:43.828Z","domain":"ONDC:FIS12","version":"2.1.0","ttl":"PT10M","action":"on_search"}
+[2024-07-02T11:27:45.176Z] [[32minfo[39m]: mode::::::::: ASYNC
+[2024-07-02T11:32:12.411Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T11:32:13.677Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T11:32:13.678Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T11:32:13.679Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T11:32:13.689Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T11:32:15.931Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T11:32:15.935Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T11:32:16.101Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T11:32:16.811Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T11:32:16.813Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T11:32:16.814Z] [[32minfo[39m]: Recieved request: {"bap_id":"bap.credit.becknprotocol.io","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bpp_id":"mybppid","bpp_uri":"https://mybpp_uri","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","timestamp":"2024-07-02T11:32:15.933Z","domain":"ONDC:FIS12","version":"2.1.0","ttl":"PT10M","action":"on_search"}
+[2024-07-02T11:32:16.849Z] [[32minfo[39m]: mode::::::::: ASYNC
+[2024-07-02T14:06:41.581Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T14:06:42.161Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T14:06:42.162Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T14:06:42.162Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T14:06:42.169Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T14:06:44.538Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T14:06:44.541Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T14:06:44.690Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T14:06:45.129Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T14:06:45.129Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T14:06:45.130Z] [[32minfo[39m]: Recieved request: {"bap_id":"bap.credit.becknprotocol.io","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bpp_id":"mybppid","bpp_uri":"https://mybpp_uri","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","timestamp":"2024-07-02T14:06:44.540Z","domain":"ONDC:FIS12","version":"2.1.0","ttl":"PT10M","action":"on_search"}
+[2024-07-02T14:06:45.161Z] [[32minfo[39m]: mode::::::::: ASYNC
+[2024-07-02T14:37:54.177Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T14:37:54.182Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T14:37:54.183Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T14:37:54.183Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T14:37:54.190Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T14:37:58.628Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T14:58:22.796Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T14:58:33.631Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T14:58:34.369Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T14:58:34.370Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T14:58:34.370Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T14:58:34.378Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T14:58:36.716Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T14:58:45.968Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T14:58:45.971Z] [[32minfo[39m]: data.item is undefined, will not be mapping that
+[2024-07-02T14:58:46.104Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T14:58:46.643Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T14:58:46.644Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T14:58:46.644Z] [[32minfo[39m]: Recieved request: {"bap_id":"bap.credit.becknprotocol.io","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bpp_id":"mybppid","bpp_uri":"https://mybpp_uri","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","timestamp":"2024-07-02T14:58:36.719Z","domain":"ONDC:FIS12","version":"2.1.0","ttl":"PT10M","action":"on_search"}
+[2024-07-02T14:58:46.675Z] [[32minfo[39m]: mode::::::::: ASYNC
+[2024-07-02T14:59:04.125Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T14:59:04.991Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T14:59:04.993Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T14:59:04.994Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T14:59:05.044Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T14:59:06.713Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T15:04:10.793Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T15:04:11.477Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T15:04:11.478Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T15:04:11.478Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T15:04:11.485Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T15:04:13.136Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T15:04:13.141Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T15:05:33.932Z] [[32minfo[39m]: data.item is undefined, will not be mapping that
+[2024-07-02T15:05:34.187Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T15:05:34.737Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T15:05:34.738Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T15:05:34.738Z] [[32minfo[39m]: Recieved request: {"bap_id":"bap.credit.becknprotocol.io","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bpp_id":"mybppid","bpp_uri":"https://mybpp_uri","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","timestamp":"2024-07-02T15:04:13.139Z","domain":"ONDC:FIS12","version":"2.1.0","ttl":"PT10M","action":"on_search"}
+[2024-07-02T15:05:34.772Z] [[32minfo[39m]: mode::::::::: ASYNC
+[2024-07-02T15:05:42.356Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T15:05:42.357Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T15:05:42.357Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T15:05:42.357Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T15:05:42.363Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T15:05:44.030Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T15:06:09.035Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T15:06:09.640Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T15:06:09.641Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T15:06:09.642Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T15:06:09.649Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T15:06:11.300Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T15:06:52.666Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T15:06:53.257Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T15:06:53.258Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T15:06:53.259Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T15:06:53.267Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T15:06:54.794Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T15:07:07.313Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T15:07:07.886Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T15:07:07.886Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T15:07:07.887Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T15:07:07.893Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T15:07:10.759Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T15:38:10.380Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T15:38:10.981Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T15:38:10.982Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T15:38:10.982Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T15:38:10.989Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T15:38:12.453Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T15:38:15.144Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T15:38:15.148Z] [[32minfo[39m]: data.item is undefined, will not be mapping that
+[2024-07-02T15:38:15.380Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T15:38:15.847Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T15:38:15.848Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T15:38:15.848Z] [[32minfo[39m]: Recieved request: {"bap_id":"bap.credit.becknprotocol.io","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bpp_id":"mybppid","bpp_uri":"https://mybpp_uri","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","timestamp":"2024-07-02T15:38:12.455Z","domain":"ONDC:FIS12","version":"2.1.0","ttl":"PT10M","action":"on_search"}
+[2024-07-02T15:38:15.888Z] [[32minfo[39m]: mode::::::::: ASYNC
+[2024-07-02T15:38:49.882Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T15:38:49.886Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T15:38:49.889Z] [[32minfo[39m]: data.item is undefined, will not be mapping that
+[2024-07-02T15:38:50.218Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T15:38:50.219Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T15:38:50.219Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T15:38:50.220Z] [[32minfo[39m]: Recieved request: {"bap_id":"bap.credit.becknprotocol.io","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bpp_id":"mybppid","bpp_uri":"https://mybpp_uri","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","timestamp":"2024-07-02T15:38:49.885Z","domain":"ONDC:FIS12","version":"2.1.0","ttl":"PT10M","action":"on_search"}
+[2024-07-02T15:38:50.300Z] [[32minfo[39m]: mode::::::::: ASYNC
+[2024-07-02T15:39:08.744Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T15:39:09.311Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T15:39:09.312Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T15:39:09.312Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T15:39:09.320Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T15:39:10.813Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T15:39:10.816Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T15:39:10.820Z] [[32minfo[39m]: data.item is undefined, will not be mapping that
+[2024-07-02T15:39:11.106Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T15:39:11.557Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T15:39:11.557Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T15:39:11.558Z] [[32minfo[39m]: Recieved request: {"bap_id":"bap.credit.becknprotocol.io","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bpp_id":"mybppid","bpp_uri":"https://mybpp_uri","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","timestamp":"2024-07-02T15:39:10.815Z","domain":"ONDC:FIS12","version":"2.1.0","ttl":"PT10M","action":"on_search"}
+[2024-07-02T15:39:11.597Z] [[32minfo[39m]: mode::::::::: ASYNC
+[2024-07-02T15:39:23.762Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T15:39:23.765Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T15:39:43.445Z] [[32minfo[39m]: data.item is undefined, will not be mapping that
+[2024-07-02T15:40:04.269Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T15:40:04.271Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T15:40:04.271Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T15:40:04.271Z] [[32minfo[39m]: Recieved request: {"bap_id":"bap.credit.becknprotocol.io","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bpp_id":"mybppid","bpp_uri":"https://mybpp_uri","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","timestamp":"2024-07-02T15:39:23.764Z","domain":"ONDC:FIS12","version":"2.1.0","ttl":"PT10M","action":"on_search"}
+[2024-07-02T15:40:04.307Z] [[32minfo[39m]: mode::::::::: ASYNC
+[2024-07-02T15:40:12.778Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T15:41:00.953Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T15:41:01.604Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T15:41:01.606Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T15:41:01.607Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T15:41:01.616Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T15:41:03.101Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T15:41:03.105Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T15:41:38.669Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T15:41:39.248Z] [[31merror[39m]: {"errors":[{"message":"must be string","details":"/message/catalog/providers/0/items/0/id"},{"message":"must be string","details":"/message/catalog/providers/0/items/1/id"}],"status":"fail"}
+[2024-07-02T15:41:39.249Z] [[31merror[39m]: Schema validation : FAIL
+[2024-07-02T15:41:39.250Z] [[31merror[39m]: b9aaecca-10b7-4d19-b640-b047a7c62196
+[2024-07-02T15:42:19.223Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T15:42:19.846Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T15:42:19.847Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T15:42:19.848Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T15:42:19.855Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T15:42:21.447Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T15:55:57.066Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T15:55:57.724Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T15:55:57.725Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T15:55:57.725Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T15:55:57.730Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T15:55:59.486Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T15:56:27.116Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T15:56:27.701Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T15:56:27.701Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T15:56:27.702Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T15:56:27.708Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T15:56:30.174Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T15:56:30.178Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T15:57:20.837Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T15:57:21.375Z] [[31merror[39m]: {"errors":[{"message":"must be string","details":"/message/catalog/providers/0/items/0/id"},{"message":"must be string","details":"/message/catalog/providers/0/items/1/id"}],"status":"fail"}
+[2024-07-02T15:57:21.376Z] [[31merror[39m]: Schema validation : FAIL
+[2024-07-02T15:57:21.376Z] [[31merror[39m]: b9aaecca-10b7-4d19-b640-b047a7c62196
+[2024-07-02T17:09:08.140Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T17:09:08.745Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T17:09:08.746Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T17:09:08.746Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T17:09:08.753Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T17:09:10.832Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T17:09:10.836Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T17:09:10.958Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T17:09:11.380Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T17:09:11.381Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T17:09:11.381Z] [[32minfo[39m]: Recieved request: {"bap_id":"bap.credit.becknprotocol.io","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bpp_id":"mybppid","bpp_uri":"https://mybpp_uri","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","timestamp":"2024-07-02T17:09:10.834Z","domain":"ONDC:FIS12","version":"2.1.0","ttl":"PT10M","action":"on_search"}
+[2024-07-02T17:09:11.413Z] [[32minfo[39m]: mode::::::::: ASYNC
+[2024-07-02T17:17:36.095Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T17:17:36.738Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T17:17:36.738Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T17:17:36.739Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T17:17:36.747Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T17:17:39.936Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T17:17:39.940Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T17:17:39.943Z] [[32minfo[39m]: data.categories.id || session.categories.id is undefined, will not be mapping that
+[2024-07-02T17:17:40.073Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T17:17:40.490Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T17:17:40.491Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T17:17:40.491Z] [[32minfo[39m]: Recieved request: {"bap_id":"bap.credit.becknprotocol.io","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bpp_id":"mybppid","bpp_uri":"https://mybpp_uri","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","timestamp":"2024-07-02T17:17:39.938Z","domain":"ONDC:FIS12","version":"2.1.0","ttl":"PT10M","action":"on_search"}
+[2024-07-02T17:17:40.519Z] [[32minfo[39m]: mode::::::::: ASYNC
+[2024-07-02T17:21:02.289Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T17:21:02.886Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T17:21:02.886Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T17:21:02.887Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T17:21:02.893Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T17:21:04.438Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T17:21:04.441Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T17:21:04.444Z] [[32minfo[39m]: data.categories.id || session.categories.id is undefined, will not be mapping that
+[2024-07-02T17:21:04.568Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T17:21:04.967Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T17:21:04.968Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T17:21:04.968Z] [[32minfo[39m]: Recieved request: {"bap_id":"bap.credit.becknprotocol.io","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bpp_id":"mybppid","bpp_uri":"https://mybpp_uri","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","timestamp":"2024-07-02T17:21:04.440Z","domain":"ONDC:FIS12","version":"2.1.0","ttl":"PT10M","action":"on_search"}
+[2024-07-02T17:21:04.997Z] [[32minfo[39m]: mode::::::::: ASYNC
+[2024-07-02T17:27:44.965Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T17:27:45.580Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T17:27:45.581Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T17:27:45.581Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T17:27:45.589Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T17:27:48.160Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T17:27:48.163Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T17:27:48.166Z] [[32minfo[39m]: data.categories.id || session.categories.id is undefined, will not be mapping that
+[2024-07-02T17:27:48.305Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T17:27:48.689Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T17:27:48.690Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T17:27:48.690Z] [[32minfo[39m]: Recieved request: {"bap_id":"bap.credit.becknprotocol.io","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bpp_id":"mybppid","bpp_uri":"https://mybpp_uri","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","timestamp":"2024-07-02T17:27:48.162Z","domain":"ONDC:FIS12","version":"2.1.0","ttl":"PT10M","action":"on_search"}
+[2024-07-02T17:27:48.719Z] [[32minfo[39m]: mode::::::::: ASYNC
+[2024-07-02T17:28:41.080Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T17:28:41.737Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T17:28:41.737Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T17:28:41.738Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T17:28:41.750Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T17:28:42.614Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T17:28:42.619Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T17:28:42.621Z] [[32minfo[39m]: data.categories.id || session.categories.id is undefined, will not be mapping that
+[2024-07-02T17:28:42.734Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T17:28:43.173Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T17:28:43.173Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T17:28:43.173Z] [[32minfo[39m]: Recieved request: {"bap_id":"bap.credit.becknprotocol.io","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bpp_id":"mybppid","bpp_uri":"https://mybpp_uri","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","timestamp":"2024-07-02T17:28:42.618Z","domain":"ONDC:FIS12","version":"2.1.0","ttl":"PT10M","action":"on_search"}
+[2024-07-02T17:28:43.215Z] [[32minfo[39m]: mode::::::::: ASYNC
+[2024-07-02T17:29:48.914Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T17:29:49.606Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T17:29:49.607Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T17:29:49.607Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T17:29:49.613Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T17:29:51.064Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T17:30:34.005Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T17:30:34.694Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T17:30:34.695Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T17:30:34.695Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T17:30:34.702Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T17:30:36.232Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T17:30:36.236Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T17:30:37.820Z] [[32minfo[39m]: data.categories.id || session.categories[0].id is undefined, will not be mapping that
+[2024-07-02T17:30:37.956Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T17:30:38.406Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T17:30:38.408Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T17:30:38.408Z] [[32minfo[39m]: Recieved request: {"bap_id":"bap.credit.becknprotocol.io","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bpp_id":"mybppid","bpp_uri":"https://mybpp_uri","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","timestamp":"2024-07-02T17:30:36.234Z","domain":"ONDC:FIS12","version":"2.1.0","ttl":"PT10M","action":"on_search"}
+[2024-07-02T17:30:38.443Z] [[32minfo[39m]: mode::::::::: ASYNC
+[2024-07-02T17:30:55.731Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T17:37:13.693Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T17:37:14.291Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T17:37:14.291Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T17:37:14.292Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T17:37:14.298Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T17:37:15.780Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T17:37:15.783Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T17:37:18.593Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T17:37:19.106Z] [[31merror[39m]: {"errors":[{"message":"must NOT have additional properties (category_ids[0])","details":"/message/catalog/providers/0/items/0"}],"status":"fail"}
+[2024-07-02T17:37:19.132Z] [[31merror[39m]: Schema validation : FAIL
+[2024-07-02T17:37:19.133Z] [[31merror[39m]: b9aaecca-10b7-4d19-b640-b047a7c62196
+[2024-07-02T17:39:19.457Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T17:40:38.046Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T17:40:40.455Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T17:40:42.934Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T17:40:43.564Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T17:40:43.565Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T17:40:43.565Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T17:40:50.078Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T17:40:50.088Z] [[31merror[39m]: {"message":"read ECONNRESET","name":"Error","stack":"Error: read ECONNRESET\n    at AxiosError.from (/Users/mohdahsan/Desktop/Projects/company/Ondc/ondc_shreyansh/current/protcol engine demo/Bpp/protocol-server-engine bpp/node_modules/axios/dist/node/axios.cjs:836:14)\n    at RedirectableRequest.handleRequestError (/Users/mohdahsan/Desktop/Projects/company/Ondc/ondc_shreyansh/current/protcol engine demo/Bpp/protocol-server-engine bpp/node_modules/axios/dist/node/axios.cjs:3086:25)\n    at RedirectableRequest.emit (node:events:520:28)\n    at eventHandlers.<computed> (/Users/mohdahsan/Desktop/Projects/company/Ondc/ondc_shreyansh/current/protcol engine demo/Bpp/protocol-server-engine bpp/node_modules/follow-redirects/index.js:38:24)\n    at ClientRequest.emit (node:events:520:28)\n    at Socket.socketErrorListener (node:_http_client:502:9)\n    at Socket.emit (node:events:520:28)\n    at emitErrorNT (node:internal/streams/destroy:170:8)\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\n    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)\n    at Axios.request (/Users/mohdahsan/Desktop/Projects/company/Ondc/ondc_shreyansh/current/protcol engine demo/Bpp/protocol-server-engine bpp/node_modules/axios/dist/node/axios.cjs:3876:41)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async handleRequest (/Users/mohdahsan/Desktop/Projects/company/Ondc/ondc_shreyansh/current/protcol engine demo/Bpp/protocol-server-engine bpp/controller/index.js:213:9)","config":{"transitional":{"silentJSONParsing":true,"forcedJSONParsing":true,"clarifyTimeoutError":false},"adapter":["xhr","http"],"transformRequest":[null],"transformResponse":[null],"timeout":0,"xsrfCookieName":"XSRF-TOKEN","xsrfHeaderName":"X-XSRF-TOKEN","maxContentLength":-1,"maxBodyLength":-1,"env":{},"headers":{"Accept":"application/json, text/plain, */*","Content-Type":"application/json","User-Agent":"axios/1.6.8","Content-Length":"7547","Accept-Encoding":"gzip, compress, deflate, br"},"method":"post","url":"http://localhost:5502/mapper/ondc","data":"{\"businessPayload\":{\"context\":{\"domain\":\"ONDC:FIS12\",\"version\":\"2.1.0\",\"transaction_id\":\"b9aaecca-10b7-4d19-b640-b047a7c62196\",\"message_id\":\"bb579fb8-cb82-4824-be12-fcbc405b6608\",\"bap_id\":\"bap.credit.becknprotocol.io\",\"bap_uri\":\"https://f569-103-243-52-154.ngrok-free.app/ondc/\",\"action\":\"search\",\"location\":{\"city\":{\"code\":\"*\"},\"country\":{\"code\":\"IND\"}},\"ttl\":\"PT10M\"},\"message\":{\"intent\":{\"category\":{\"descriptor\":{\"code\":\"INVOICE_BASED_LOAN\"}}}}},\"updatedSession\":{\"version\":\"2.1.0\",\"country\":\"IND\",\"cityCode\":\"*\",\"configName\":\"invoice-loan-seller-flow-1\",\"transaction_id\":\"b9aaecca-10b7-4d19-b640-b047a7c62196\",\"bap_id\":\"bap.credit.becknprotocol.io\",\"bap_uri\":\"https://f569-103-243-52-154.ngrok-free.app/ondc/\",\"ttl\":\"PT10M\",\"domain\":\"ONDC:FIS12\",\"summary\":\"Invoice Based Loans Seller\",\"loan_provider\":{\"images\":[{\"url\":\"https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png\",\"size_type\":\"sm\"}],\"name\":\"ICICI Bank\",\"short_desc\":\"ICICI Bank Ltd\",\"long_desc\":\"ICICI Bank Ltd, India.\"},\"loanCategaory\":\"INVOICE_BASED_LOAN\",\"collectedBy\":\"BAP\",\"paymentCollectedBy\":\"BPP\",\"bankAccountNumber\":\"123456789\",\"virtualPaymentAddress\":\"adasd@okiciic\",\"bankCode\":\"fj3jf9ij3f02\",\"bpp_uri\":\"https://mybpp_uri\",\"bpp_id\":\"mybppid\",\"loan_provider_id\":\"PROVIDER_ID\",\"categories\":[{\"descriptor\":{\"name\":\"Invoice based loan\",\"code\":\"INVOICE_BASED_LOAN\"},\"id\":\"101123\"}],\"tags\":{\"CONTACT_INFO\":{\"display\":false,\"GRO_NAME\":\"ICICI\",\"GRO_EMAIL\":\"lifeline@iciciprulife.com\",\"GRO_CONTACT_NUMBER\":\"1860 266 7766\",\"GRO_DESIGNATION\":\"Nodal Grievance Redressal Officer\",\"GRO_ADDRESS\":\"One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013\",\"CUSTOMER_SUPPORT_LINK\":\"https://buy.iciciprulife.com/buy/GrievanceRedStep.htm?execution=e1s1\",\"CUSTOMER_SUPPORT_CONTACT_NUMBER\":\"1800 1080\",\"CUSTOMER_SUPPORT_EMAIL\":\"customer.care@icicibank.com\"},\"LSP_INFO\":{\"LSP_NAME\":\"ICICI_LSP\",\"LSP_EMAIL\":\"lsp@iciciprulife.com\",\"LSP_CONTACT_NUMBER\":\"1860 266 7766\",\"LSP_ADDRESS\":\"One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013\"}},\"paymentTagsSearch\":{\"BUYER_FINDER_FEES\":{\"BUYER_FINDER_FEES_TYPE\":\"percent-annualized\",\"BUYER_FINDER_FEES_PERCENTAGE\":\"1\"},\"SETTLEMENT_TERMS\":{\"SETTLEMENT_WINDOW\":\"PT60M\",\"SETTLEMENT_BASIS\":\"INVOICE_RECEIPT\",\"MANDATORY_ARBITRATION\":\"TRUE\",\"COURT_JURISDICTION\":\"New Delhi\",\"STATIC_TERMS\":\"https://bpp.credit.becknprotocol.org/personal-banking/loans/invoice-based-loan\",\"OFFLINE_CONTRACT\":\"true\"}},\"currentTransactionId\":\"b9aaecca-10b7-4d19-b640-b047a7c62196\",\"transactionIds\":[\"b9aaecca-10b7-4d19-b640-b047a7c62196\"],\"calls\":[{\"config\":\"search\",\"mode\":\"ASYNC\",\"unsolicated\":false,\"callback\":{\"config\":\"search\",\"endpoint\":\"mapper/ondc\",\"mode\":\"ASYNC\",\"unsolicitedEndpoint\":\"/search\",\"becknPayload\":[{\"context\":{\"domain\":\"ONDC:FIS12\",\"location\":{\"country\":{\"code\":\"IND\"},\"city\":{\"code\":\"*\"}},\"transaction_id\":\"b9aaecca-10b7-4d19-b640-b047a7c62196\",\"message_id\":\"bb579fb8-cb82-4824-be12-fcbc405b6608\",\"action\":\"search\",\"timestamp\":\"2023-05-25T05:23:03.443Z\",\"version\":\"2.1.0\",\"bap_uri\":\"https://f569-103-243-52-154.ngrok-free.app/ondc/\",\"bap_id\":\"bap.credit.becknprotocol.io\",\"ttl\":\"PT10M\"},\"message\":{\"intent\":{\"category\":{\"descriptor\":{\"code\":\"INVOICE_BASED_LOAN\"}},\"payment\":{\"collected_by\":\"BPP\",\"tags\":[{\"descriptor\":{\"code\":\"BUYER_FINDER_FEES\"},\"display\":false,\"list\":[{\"descriptor\":{\"code\":\"BUYER_FINDER_FEES_TYPE\"},\"value\":\"percent-annualized\"},{\"descriptor\":{\"code\":\"BUYER_FINDER_FEES_PERCENTAGE\"},\"value\":\"1\"}]},{\"descriptor\":{\"code\":\"SETTLEMENT_TERMS\"},\"display\":false,\"list\":[{\"descriptor\":{\"code\":\"DELAY_INTEREST\"},\"value\":\"2.5\"},{\"descriptor\":{\"code\":\"STATIC_TERMS\"},\"value\":\"https://bap.credit.becknprotocol.io/personal-banking/loans/personal-loan\"},{\"descriptor\":{\"code\":\"OFFLINE_CONTRACT\"},\"value\":\"true\"}]}]}}}}],\"businessPayload\":[{\"context\":{\"domain\":\"ONDC:FIS12\",\"version\":\"2.1.0\",\"transaction_id\":\"b9aaecca-10b7-4d19-b640-b047a7c62196\",\"message_id\":\"bb579fb8-cb82-4824-be12-fcbc405b6608\",\"bap_id\":\"bap.credit.becknprotocol.io\",\"bap_uri\":\"https://f569-103-243-52-154.ngrok-free.app/ondc/\",\"action\":\"search\",\"location\":{\"city\":{\"code\":\"*\"},\"country\":{\"code\":\"IND\"}},\"ttl\":\"PT10M\"},\"message\":{\"intent\":{\"category\":{\"descriptor\":{\"code\":\"INVOICE_BASED_LOAN\"}}}}}]}},{\"config\":\"on_search\",\"mode\":\"ASYNC\",\"callback\":{\"config\":\"on_search\",\"endpoint\":\"mapper/ondc\",\"mode\":\"ASYNC\",\"unsolicitedEndpoint\":\"mapper/unsolicited\"}},{\"config\":\"select\",\"mode\":\"ASYNC\",\"unsolicated\":false,\"callback\":{\"config\":\"select\",\"endpoint\":\"mapper/ondc\",\"mode\":\"ASYNC\",\"unsolicitedEndpoint\":\"/select\",\"becknPayload\":[{\"context\":{\"domain\":\"ONDC:FIS12\",\"location\":{\"country\":{\"code\":\"IND\"},\"city\":{\"code\":\"*\"}},\"transaction_id\":\"b9aaecca-10b7-4d19-b640-b047a7c62196\",\"message_id\":\"bb579fb8-cb82-4824-be12-fcbc405b6608\",\"action\":\"search\",\"timestamp\":\"2023-05-25T05:23:03.443Z\",\"version\":\"2.1.0\",\"bap_uri\":\"https://f569-103-243-52-154.ngrok-free.app/ondc/\",\"bap_id\":\"bap.credit.becknprotocol.io\",\"ttl\":\"PT10M\"},\"message\":{\"intent\":{\"category\":{\"descriptor\":{\"code\":\"INVOICE_BASED_LOAN\"}},\"payment\":{\"collected_by\":\"BPP\",\"tags\":[{\"descriptor\":{\"code\":\"BUYER_FINDER_FEES\"},\"display\":false,\"list\":[{\"descriptor\":{\"code\":\"BUYER_FINDER_FEES_TYPE\"},\"value\":\"percent-annualized\"},{\"descriptor\":{\"code\":\"BUYER_FINDER_FEES_PERCENTAGE\"},\"value\":\"1\"}]},{\"descriptor\":{\"code\":\"SETTLEMENT_TERMS\"},\"display\":false,\"list\":[{\"descriptor\":{\"code\":\"DELAY_INTEREST\"},\"value\":\"2.5\"},{\"descriptor\":{\"code\":\"STATIC_TERMS\"},\"value\":\"https://bap.credit.becknprotocol.io/personal-banking/loans/personal-loan\"},{\"descriptor\":{\"code\":\"OFFLINE_CONTRACT\"},\"value\":\"true\"}]}]}}}}],\"businessPayload\":[{\"context\":{\"domain\":\"ONDC:FIS12\",\"version\":\"2.1.0\",\"transaction_id\":\"b9aaecca-10b7-4d19-b640-b047a7c62196\",\"message_id\":\"bb579fb8-cb82-4824-be12-fcbc405b6608\",\"bap_id\":\"bap.credit.becknprotocol.io\",\"bap_uri\":\"https://f569-103-243-52-154.ngrok-free.app/ondc/\",\"action\":\"search\",\"location\":{\"city\":{\"code\":\"*\"},\"country\":{\"code\":\"IND\"}},\"ttl\":\"PT10M\"},\"message\":{\"intent\":{\"category\":{\"descriptor\":{\"code\":\"INVOICE_BASED_LOAN\"}}}}}]}},{\"config\":\"on_select\",\"mode\":\"ASYNC\",\"callback\":{\"config\":\"on_select\",\"endpoint\":\"mapper/ondc\",\"mode\":\"ASYNC\",\"unsolicitedEndpoint\":\"mapper/unsolicited\"}}],\"additioalFlows\":[],\"api\":{\"search\":{\"default\":{\"service_url\":\"http://localhost:5501/mapper/ondc\",\"sync\":false}}},\"countryCode\":\"IND\"},\"messageId\":\"bb579fb8-cb82-4824-be12-fcbc405b6608\",\"sessionId\":null,\"response\":{\"context\":{\"domain\":\"ONDC:FIS12\",\"location\":{\"country\":{\"code\":\"IND\"},\"city\":{\"code\":\"*\"}},\"transaction_id\":\"b9aaecca-10b7-4d19-b640-b047a7c62196\",\"message_id\":\"bb579fb8-cb82-4824-be12-fcbc405b6608\",\"action\":\"search\",\"timestamp\":\"2023-05-25T05:23:03.443Z\",\"version\":\"2.1.0\",\"bap_uri\":\"https://f569-103-243-52-154.ngrok-free.app/ondc/\",\"bap_id\":\"bap.credit.becknprotocol.io\",\"ttl\":\"PT10M\"},\"message\":{\"intent\":{\"category\":{\"descriptor\":{\"code\":\"INVOICE_BASED_LOAN\"}},\"payment\":{\"collected_by\":\"BPP\",\"tags\":[{\"descriptor\":{\"code\":\"BUYER_FINDER_FEES\"},\"display\":false,\"list\":[{\"descriptor\":{\"code\":\"BUYER_FINDER_FEES_TYPE\"},\"value\":\"percent-annualized\"},{\"descriptor\":{\"code\":\"BUYER_FINDER_FEES_PERCENTAGE\"},\"value\":\"1\"}]},{\"descriptor\":{\"code\":\"SETTLEMENT_TERMS\"},\"display\":false,\"list\":[{\"descriptor\":{\"code\":\"DELAY_INTEREST\"},\"value\":\"2.5\"},{\"descriptor\":{\"code\":\"STATIC_TERMS\"},\"value\":\"https://bap.credit.becknprotocol.io/personal-banking/loans/personal-loan\"},{\"descriptor\":{\"code\":\"OFFLINE_CONTRACT\"},\"value\":\"true\"}]}]}}}}}"},"code":"ECONNRESET","status":null}
+[2024-07-02T17:40:54.162Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T17:40:54.167Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T17:41:55.746Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T17:41:56.289Z] [[31merror[39m]: {"errors":[{"message":"must NOT have additional properties (category_ids[0])","details":"/message/catalog/providers/0/items/0"}],"status":"fail"}
+[2024-07-02T17:41:56.290Z] [[31merror[39m]: Schema validation : FAIL
+[2024-07-02T17:41:56.291Z] [[31merror[39m]: b9aaecca-10b7-4d19-b640-b047a7c62196
+[2024-07-02T17:41:57.305Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T17:47:31.820Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-02T17:47:32.472Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-02T17:47:32.473Z] [[32minfo[39m]: Attribute config missing for invoice-loan-seller-flow-1
+[2024-07-02T17:47:32.473Z] [[32minfo[39m]: Recieved request: {"domain":"ONDC:FIS12","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"b9aaecca-10b7-4d19-b640-b047a7c62196","message_id":"bb579fb8-cb82-4824-be12-fcbc405b6608","action":"search","timestamp":"2023-05-25T05:23:03.443Z","version":"2.1.0","bap_uri":"https://f569-103-243-52-154.ngrok-free.app/ondc/","bap_id":"bap.credit.becknprotocol.io","ttl":"PT10M"}
+[2024-07-02T17:47:34.897Z] [[32minfo[39m]: mode>>>>>>>>> ASYNC
+[2024-07-02T17:47:37.575Z] [[32minfo[39m]: inside businessToBecknMethod controller: 
+[2024-07-02T17:47:37.578Z] [[32minfo[39m]: data.context.message_id is undefined, will not be mapping that
+[2024-07-02T17:48:18.823Z] [[32minfo[39m]: Inside schema validation service for on_search api protocol server
+[2024-07-02T17:48:19.345Z] [[31merror[39m]: {"errors":[{"message":"must NOT have additional properties (category_ids[0])","details":"/message/catalog/providers/0/items/0"}],"status":"fail"}
+[2024-07-02T17:48:19.347Z] [[31merror[39m]: Schema validation : FAIL
+[2024-07-02T17:48:19.348Z] [[31merror[39m]: b9aaecca-10b7-4d19-b640-b047a7c62196
+[2024-07-02T17:48:20.322Z] [[32minfo[39m]: inside businessToBecknMethod controller: 

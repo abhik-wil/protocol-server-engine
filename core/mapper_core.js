@@ -61,7 +61,22 @@ const createNestedField = (obj, path, value) => {
       currentObj = currentObj[key];
     }
   }
-
+  // handle array insertion ex key[0]
+  const isArrayIndex = /\[\d+\]/.test(keys[keys.length - 1]); // Check if the key represents an array index
+  if(isArrayIndex){
+    const key = keys[keys.length - 1]
+    const arrayKey = key.substring(0, key.indexOf("["));
+    const index = parseInt(key.match(/\[(\d+)\]/)[1], 10);
+    currentObj[arrayKey] = Array.isArray(currentObj[arrayKey])  ?  currentObj[arrayKey] : []
+    if(currentObj[arrayKey][index] === undefined){
+      console.log(keys,"index not present in array therefore pushing into the array" )
+      currentObj[arrayKey] = [...currentObj[arrayKey],value]
+    }else{
+      currentObj[arrayKey][index] = value
+    }
+    
+    return
+  }
   currentObj[keys[keys.length - 1]] = value;
 };
 
@@ -111,6 +126,9 @@ const createPayload = (config, action, data, session) => {
         }
       }
 
+      if(item.beckn_key === "message.catalog.providers[0].items[0].category_ids[0]"){
+        console.log("temp")
+      }
 
       if (eval(item.value) && (item.check ? eval(item.check) : true))
         createNestedField(

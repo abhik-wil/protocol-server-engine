@@ -37,6 +37,10 @@ protocol:
 
 
   on_search:
+    sessionData:
+      - beckn_key: consentHandler
+        value: data.consentHandler
+
     mapping:
       - beckn_key: context.bap_id
         value: session.bap_id
@@ -65,50 +69,73 @@ protocol:
       - beckn_key: context.action
         value: action
 
+    ##message
+
       - beckn_key: message.catalog.descriptor.name
         value: data.name || session.catalogname
         
-        # new mapping
-      - beckn_key: message.catalog.providers.items[0].id
+
+      # Provider
+      - beckn_key: message.catalog.providers[0].descriptor
+        value: data.loan_provider        ||  session.loan_provider
+
+      - beckn_key: message.catalog.providers[0].id
+        value: data.loan_provider_id        ||  session.loan_provider_id
+
+      - beckn_key: message.catalog.providers[0].categories
+        value: data.categories || session.categories
+
+       #ui inputs (item && item tags)
+      - beckn_key: message.catalog.providers[0].items[0].id
         value: data.itemid
-  
-      - beckn_key: message.catalog.providers.items[0].tags
+        
+
+
+      - beckn_key: message.catalog.providers[0].items[0].tags
         value: data.itemtags                || session.itemtags
         compute: buildTags(data.itemtags    || session.itemtags)
 
-      - beckn_key: message.catalog.providers[0].id
-        value: data.loan_provider_id            ||  session.loan_provider_id
+      # #sample 
+      # - beckn_key: message.catalog.providers[0].items[index].id
+      #   value: data.item || session.id
+      #   loop: true
+      # #sample 
+      - beckn_key: message.catalog.providers[0].items[0].category_ids[0]
+        value: data?.categories?.id || session.categories[0].id
+        # loop: true
 
-      - beckn_key: message.catalog.providers[0].descriptor
-        value: data.loan_provider        ||  session.loan_provider
-        
 
-      - beckn_key: message.catalog.descriptor.name
-        value: data.name          ||  session.loan_provider.name
-
-      - beckn_key: message.catalog.providers[0].categories[0].id
-        value: data.category_id
-      - beckn_key: message.catalog.providers[0].categories[0].descriptor
-        value: data.loan_type         || session.loan_type
-
+      #Items 
       - beckn_key: message.catalog.providers[0].items
         value: data.loan_offers
-      - beckn_key: message.catalog.providers[0].payments[0].tags
-        value: data.payments_tags       || session.payment_tags
-        compute: buildTags(data.payments_tags || session.payment_tags)
+
+      - beckn_key: message.catalog.providers[0].items[0].descriptor
+        value: session.categories[0].descriptor
+
+
+
+      #Tags
       - beckn_key: message.catalog.providers[0].tags
         value: data.tags                || session.tags
         compute: buildTags(data.tags    || session.tags)
 
+
+      #payments
+      - beckn_key: message.catalog.providers[0].payments[0].tags
+        value: data.paymentTagsSearch       || session.paymentTagsSearch
+
+        compute: buildTags(data.paymentTagsSearch || session.paymentTagsSearch)
       - beckn_key: message.catalog.providers[0].payments[0].collected_by
         value: data.payment_collectedby || session.collectedBy
+
 
       - beckn_key: message
         value: data.error && data.message
 
       - beckn_key: error
         value: data.error
-  
+    # loop:
+    #   - key: message.intent.provider[0].items
   select:
     sessionData:
       - business_key: bap_id

@@ -1,0 +1,265 @@
+{
+    "context": {
+        "action": "on_search",
+        "bap_id": "bap.credit.becknprotocol.io",
+        "bap_uri": "https://f569-103-243-52-154.ngrok-free.app/ondc/",
+        "bpp_id": "mybppid",
+        "bpp_uri": "https://mybpp_uri",
+        "domain": "ONDC:FIS12",
+        "location": {
+            "city": {
+                "code": "*"
+            },
+            "country": {
+                "code": "IND"
+            }
+        },
+        "timestamp": "2024-07-02T19:32:34.972Z",
+        "transaction_id": "b9aaecca-10b7-4d19-b640-b047a7c62196",
+        "ttl": "PT10M",
+        "version": "2.1.0"
+    },
+    "message": {
+        "catalog": {
+            "providers": [
+                {
+                    "categories": [
+                        {
+                            "descriptor": {
+                                "code": "INVOICE_BASED_LOAN",
+                                "name": "Invoice based loan"
+                            },
+                            "id": "101123"
+                        }
+                    ],
+                    "descriptor": {
+                        "images": [
+                            {
+                                "size_type": "sm",
+                                "url": "https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png"
+                            }
+                        ],
+                        "long_desc": "ICICI Bank Ltd, India.",
+                        "name": "ICICI Bank",
+                        "short_desc": "ICICI Bank Ltd"
+                    },
+                    "id": "PROVIDER_ID",
+                    "items": [
+                        {
+                            "category_ids": [
+                                "101123"
+                            ],
+                            "descriptor": {
+                                "code": "INVOICE_BASED_LOAN",
+                                "name": "Invoice based loan"
+                            },
+                            "id": "ITEM_ID_INVOICE_BASED_LOAN",
+                            "tags": [
+                                {
+                                    "descriptor": {
+                                        "code": "INFO"
+                                    },
+                                    "display": false,
+                                    "list": [
+                                        {
+                                            "descriptor": {
+                                                "code": "MIN_INTEREST_RATE"
+                                            },
+                                            "value": "9 %"
+                                        },
+                                        {
+                                            "descriptor": {
+                                                "code": "MAX_INTEREST_RATE"
+                                            },
+                                            "value": "15 %"
+                                        },
+                                        {
+                                            "descriptor": {
+                                                "code": "MIN_TENURE"
+                                            },
+                                            "value": "PT5M"
+                                        },
+                                        {
+                                            "descriptor": {
+                                                "code": "MAX_TENURE"
+                                            },
+                                            "value": "PT5Y"
+                                        },
+                                        {
+                                            "descriptor": {
+                                                "code": "MIN_LOAN_AMOUNT"
+                                            },
+                                            "value": "50000 INR"
+                                        },
+                                        {
+                                            "descriptor": {
+                                                "code": "MAX_LOAN_AMOUNT"
+                                            },
+                                            "value": "5000000 INR"
+                                        }
+                                    ]
+                                }
+                            ]a                        }
+                    ],
+                    "payments": [
+                        {
+                            "collected_by": "BAP",
+                            "tags": [
+                                {
+                                    "descriptor": {
+                                        "code": "BUYER_FINDER_FEES"
+                                    },
+                                    "list": [
+                                        {
+                                            "descriptor": {
+                                                "code": "BUYER_FINDER_FEES_TYPE"
+                                            },
+                                            "value": "percent-annualized"
+                                        },
+                                        {
+                                            "descriptor": {
+                                                "code": "BUYER_FINDER_FEES_PERCENTAGE"
+                                            },
+                                            "value": "1"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "descriptor": {
+                                        "code": "SETTLEMENT_TERMS"
+                                    },
+                                    "list": [
+                                        {
+                                            "descriptor": {
+                                                "code": "SETTLEMENT_WINDOW"
+                                            },
+                                            "value": "PT60M"
+                                        },
+                                        {
+                                            "descriptor": {
+                                                "code": "SETTLEMENT_BASIS"
+                                            },
+                                            "value": "INVOICE_RECEIPT"
+                                        },
+                                        {
+                                            "descriptor": {
+                                                "code": "MANDATORY_ARBITRATION"
+                                            },
+                                            "value": "TRUE"
+                                        },
+                                        {
+                                            "descriptor": {
+                                                "code": "COURT_JURISDICTION"
+                                            },
+                                            "value": "New Delhi"
+                                        },
+                                        {
+                                            "descriptor": {
+                                                "code": "STATIC_TERMS"
+                                            },
+                                            "value": "https://bpp.credit.becknprotocol.org/personal-banking/loans/invoice-based-loan"
+                                        },
+                                        {
+                                            "descriptor": {
+                                                "code": "OFFLINE_CONTRACT"
+                                            },
+                                            "value": "true"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "tags": [
+                        {
+                            "descriptor": {
+                                "code": "CONTACT_INFO"
+                            },
+                            "list": [
+                                {
+                                    "descriptor": {
+                                        "code": "GRO_NAME"
+                                    },
+                                    "value": "ICICI"
+                                },
+                                {
+                                    "descriptor": {
+                                        "code": "GRO_EMAIL"
+                                    },
+                                    "value": "lifeline@iciciprulife.com"
+                                },
+                                {
+                                    "descriptor": {
+                                        "code": "GRO_CONTACT_NUMBER"
+                                    },
+                                    "value": "1860 266 7766"
+                                },
+                                {
+                                    "descriptor": {
+                                        "code": "GRO_DESIGNATION"
+                                    },
+                                    "value": "Nodal Grievance Redressal Officer"
+                                },
+                                {
+                                    "descriptor": {
+                                        "code": "GRO_ADDRESS"
+                                    },
+                                    "value": "One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013"
+                                },
+                                {
+                                    "descriptor": {
+                                        "code": "CUSTOMER_SUPPORT_LINK"
+                                    },
+                                    "value": "https://buy.iciciprulife.com/buy/GrievanceRedStep.htm?execution=e1s1"
+                                },
+                                {
+                                    "descriptor": {
+                                        "code": "CUSTOMER_SUPPORT_CONTACT_NUMBER"
+                                    },
+                                    "value": "1800 1080"
+                                },
+                                {
+                                    "descriptor": {
+                                        "code": "CUSTOMER_SUPPORT_EMAIL"
+                                    },
+                                    "value": "customer.care@icicibank.com"
+                                }
+                            ]
+                        },
+                        {
+                            "descriptor": {
+                                "code": "LSP_INFO"
+                            },
+                            "list": [
+                                {
+                                    "descriptor": {
+                                        "code": "LSP_NAME"
+                                    },
+                                    "value": "ICICI_LSP"
+                                },
+                                {
+                                    "descriptor": {
+                                        "code": "LSP_EMAIL"
+                                    },
+                                    "value": "lsp@iciciprulife.com"
+                                },
+                                {
+                                    "descriptor": {
+                                        "code": "LSP_CONTACT_NUMBER"
+                                    },
+                                    "value": "1860 266 7766"
+                                },
+                                {
+                                    "descriptor": {
+                                        "code": "LSP_ADDRESS"
+                                    },
+                                    "value": "One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

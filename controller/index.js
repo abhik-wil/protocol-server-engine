@@ -144,6 +144,7 @@ const handleRequest = async (response, session, sessionId) => {
 
       if (isUnsolicited) {
         config = action;
+        // config = getUnsolictedConfig(action);
       }
 
       console.log("config >>>>>", config);
@@ -158,6 +159,16 @@ const handleRequest = async (response, session, sessionId) => {
 
       let urlEndpint = null;
       let mode = ASYNC_MODE;
+
+      // updatedSession.unsolicited.map((call) => {
+      //   if (isUnsolicited && call.callback.config === action) {
+      //     call.callback.unsolicited = [
+      //       ...(call.callback.unsolicited || []),
+      //       response,
+      //     ];
+      //     urlEndpint = call.callback.unsolicitedEndpoint;
+      //   }
+      // });
 
       const updatedCalls = updatedSession.calls.map((call) => {
         if (isUnsolicited && call.callback.config === action) {

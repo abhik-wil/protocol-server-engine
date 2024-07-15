@@ -66,4 +66,6 @@ const buildNackPayload = (msg, code = "346001") => {
   return nack;
 };
 
+const getUnsolictedCondif = () => {};
+
 module.exports = { formatted_error, parseBoolean, jsonout, buildNackPayload };

@@ -43,6 +43,7 @@ function loadConfig() {
 const getConfigBasedOnFlow = async (flowId) => {
   return new Promise(async (resolve, reject) => {
     try {
+      
       this.config = await loadConfig();
 
       let filteredProtocol = null;

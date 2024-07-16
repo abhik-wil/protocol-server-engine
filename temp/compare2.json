@@ -14,13 +14,16 @@
                 "code": "IND"
             }
         },
-        "timestamp": "2024-07-02T19:32:34.972Z",
+        "timestamp": "2024-07-03T10:36:42.834Z",
         "transaction_id": "b9aaecca-10b7-4d19-b640-b047a7c62196",
         "ttl": "PT10M",
         "version": "2.1.0"
     },
     "message": {
         "catalog": {
+            "descriptor": {
+                "name": "ICICI Bank"
+            },
             "providers": [
                 {
                     "categories": [
@@ -99,7 +102,31 @@
                                         }
                                     ]
                                 }
-                            ]a                        }
+                            ],
+                            "xinput": {
+                                "form": {
+                                    "id": "F01",
+                                    "mime_type": "text/html",
+                                    "multiple_sumbissions": false,
+                                    "resubmit": false,
+                                    "url": "https://bpp.credit.becknprotocol.org/xinput/formid/F01"
+                                },
+                                "head": {
+                                    "descriptor": {
+                                        "name": "Customer Information"
+                                    },
+                                    "headings": [
+                                        "Organization Information"
+                                    ],
+                                    "index": {
+                                        "cur": 0,
+                                        "max": 0,
+                                        "min": 0
+                                    }
+                                },
+                                "required": true
+                            }
+                        }
                     ],
                     "payments": [
                         {
@@ -175,6 +202,7 @@
                             "descriptor": {
                                 "code": "CONTACT_INFO"
                             },
+                            "display": false,
                             "list": [
                                 {
                                     "descriptor": {

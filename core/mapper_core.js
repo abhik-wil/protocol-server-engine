@@ -1,23 +1,36 @@
 const { v4: uuidv4 } = require("uuid");
 const logger = require("../utils/logger").init();
 
-const buildTags = (tags) => {
-  if(typeof tags === 'string'){
-    tags = JSON.parse(tags)
+
+// convert stringified payload into object
+const parseString = (object)=>{
+
+  if(typeof object === 'object'){
+    return object
+  }else{
+    return parseString(JSON.parse(object))
   }
+}
+
+
+const buildTags = (tags,populateName,populateTagName) => {
+  tags = parseString(tags)
   return Object.keys(tags).map((key) => {
-    const subObject = tags[key];
+    const subObject = {...tags[key]};
 
     let display =
       subObject["display"] === undefined
         ? {}
         : { display: subObject["display"] };
     delete subObject["display"];
+    const tagname = populateTagName? {name:key}:{}
     const list = Object.keys(subObject).map((subKey) => {
       const value = subObject[subKey];
+      const listname = populateName? {name:subKey}:{}
       return {
         descriptor: {
           code: subKey,
+          ...listname
         },
         value: typeof value === "string" ? value : value.toString(),
       };
@@ -26,6 +39,8 @@ const buildTags = (tags) => {
     return {
       descriptor: {
         code: key,
+        ...tagname
+
       },
       ...display,
       list: list,
@@ -126,7 +141,7 @@ const createPayload = (config, action, data, session) => {
         }
       }
 
-      if(item.beckn_key === "message.catalog.providers[0].items[0].category_ids[0]"){
+      if(item.value === "data.paymentTagsSearch       || session.paymentTagsSearch"){
         console.log("temp")
       }
 
@@ -314,6 +329,7 @@ const createBusinessPayload = (myconfig, obj, session) => {
 };
 
 const createBecknObject = (session, type, data, config) => {
+    
   if (config.sessionData) {
     const updatedSession = createPayload(
       config.sessionData,
@@ -321,11 +337,20 @@ const createBecknObject = (session, type, data, config) => {
       data,
       session
     );
-
     session = { ...session, ...updatedSession };
+
   }
   const payload = createPayload(config.mapping, type, data, session);
+  if(config.afterMapping){
+    const updatedSession = createPayload(
+    config.afterMapping,
+    type,
+    payload,
+    session
+  );
+  session = { ...session, ...updatedSession };
 
+  }
   return { payload, session };
 };
 

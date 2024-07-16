@@ -21,7 +21,7 @@ class ConfigLoader {
 
         const schema = await $RefParser.dereference(config);
 
-        this.config = schema;
+      this.config = schema;
 
         return;
       } else {

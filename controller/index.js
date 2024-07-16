@@ -149,14 +149,15 @@ const handleRequest = async (response, session, sessionId) => {
       let isUnsolicited = true;
 
       // if call is unsolicated
-      session.calls.map((call) => { // sare configs se match krrha h this step won't be necessary 
-        if (call.callback?.message_id === response.context.message_id || call.unsolicated === false) {
-          config = call.callback?.config;
-          isUnsolicited = false;
-        }
-      });
+      // session.calls.map((call) => { // sare configs se match krrha h this step won't be necessary 
+      //   if (call.callback?.message_id === response.context.message_id || call.unsolicated === false) {
+      //     config = call.callback?.config;
+      //     isUnsolicited = false;
+      //   }
+      // });
+      
 
-      if (isUnsolicited) {
+      if (isUnsolicited || true) {
         config = action;
       }
 

@@ -35,7 +35,7 @@ function getLogger() {
         level: 'debug'
       }),
       new transports.DailyRotateFile({
-        filename: 'log_report',
+        filename: './logs/log_report',
         datePattern: 'YYYY-MM-DD',
         zippedArchive: true,
         level: 'info'

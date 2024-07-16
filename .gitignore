@@ -4,3 +4,4 @@ node_modules
 .seller.mob.env
 .seller.FIS.env
 .buyer.mob.env
+logs

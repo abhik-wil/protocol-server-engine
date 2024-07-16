@@ -13,26 +13,26 @@ protocol:
         extractionPath: context.message_id
 
     mapping:
-      - business_key: context.domain
-        extractionPath: session.domain
-      - business_key: context.version
-        extractionPath: session.version
-      - business_key: context.transaction_id
-        extractionPath: session.transaction_id
-      - business_key: context.message_id
-        extractionPath: session.message_id
-      - business_key: context.bap_id
-        extractionPath: session.bap_id
-      - business_key: context.bap_uri
-        extractionPath: session.bap_uri
-      - business_key: context.action
-        extractionPath: context.action
-      - business_key: context.location.city.code
-        extractionPath: session.cityCode
-      - business_key: context.location.country.code
-        extractionPath: session.countryCode
-      - business_key: context.ttl
-        extractionPath: context.ttl
+      # - business_key: context.domain
+      #   extractionPath: session.domain
+      # - business_key: context.version
+      #   extractionPath: session.version
+      # - business_key: context.transaction_id
+      #   extractionPath: session.transaction_id
+      # - business_key: context.message_id
+      #   extractionPath: session.message_id
+      # - business_key: context.bap_id
+      #   extractionPath: session.bap_id
+      # - business_key: context.bap_uri
+      #   extractionPath: session.bap_uri
+      # - business_key: context.action
+      #   extractionPath: context.action
+      # - business_key: context.location.city.code
+      #   extractionPath: session.cityCode
+      # - business_key: context.location.country.code
+      #   extractionPath: session.countryCode
+      # - business_key: context.ttl
+      #   extractionPath: context.ttl
 
       - business_key: message.intent.category.descriptor.code
         extractionPath: message.intent.category.descriptor.code
@@ -53,32 +53,9 @@ protocol:
         value: data.offerpricevalue     
 
     mapping:
-      - beckn_key: context.bap_id
-        value: session.bap_id
-      - beckn_key: context.bap_uri
-        value: session.bap_uri
-      - beckn_key: context.bpp_id
-        value: session.bpp_id
-      - beckn_key: context.bpp_uri
-        value: session.bpp_uri
-      - beckn_key: context.location.country.code
-        value: session.country
-      - beckn_key: context.location.city.code
-        value: session.cityCode
-      - beckn_key: context.transaction_id
-        value: session.currentTransactionId
-      - beckn_key: context.message_id
-        value: session.message_id
-      - beckn_key: context.timestamp
-        value: timestamp
-      - beckn_key: context.domain
-        value: session.domain
-      - beckn_key: context.version
-        value: session.version
-      - beckn_key: context.ttl
-        value: session.ttl
-      - beckn_key: context.action
-        value: action
+      - beckn_key: context
+        value: session
+        compute: buildContext(session, action)
 
     ##message
 
@@ -96,13 +73,6 @@ protocol:
       - beckn_key: message.catalog.providers[0].categories
         value: data.categories || session.categories
 
-
-
-
-      # #sample 
-      # - beckn_key: message.catalog.providers[0].items[index].id
-      #   value: data.item || session.id
-      #   loop: true
 
 
        #ui inputs (item && item tags)
@@ -200,40 +170,19 @@ protocol:
       - beckn_key: items
         value: data.message.catalog.providers[0].items
 
+      # #sample 
+      # - beckn_key: message.catalog.providers[0].items[index].id
+      #   value: data.item || session.id
+      #   loop: true
+
+
+
   select:
     sessionData:
-      - business_key: bap_id
-        extractionPath: context.bap_id
-      - business_key: bap_uri
-        extractionPath: context.bap_uri
-      - business_key: cityCode
-        extractionPath: context.location.city.code || session.cityCode
-      - business_key: countryCode
-        extractionPath: context.location.country.code || session.countryCode
       - business_key: message_id
         extractionPath: context.message_id
 
     mapping:
-      - business_key: context.domain
-        extractionPath: session.domain
-      - business_key: context.version
-        extractionPath: session.version
-      - business_key: context.transaction_id
-        extractionPath: session.transaction_id
-      - business_key: context.message_id
-        extractionPath: context.message_id
-      - business_key: context.bap_id
-        extractionPath: session.bap_id
-      - business_key: context.bap_uri
-        extractionPath: session.bap_uri
-      - business_key: context.action
-        extractionPath: context.action
-      - business_key: context.location.city.code
-        extractionPath: session.cityCode
-      - business_key: context.location.country.code
-        extractionPath: session.countryCode
-      - business_key: context.ttl
-        extractionPath: context.ttl
 
       - business_key: message.order.items
         extractionPath: message.order.items
@@ -242,76 +191,24 @@ protocol:
 
   on_select:
     mapping:
-      - beckn_key: context.bap_id
-        value: session.bap_id
-      - beckn_key: context.bap_uri
-        value: session.bap_uri
-      - beckn_key: context.bpp_id
-        value: session.bpp_id
-      - beckn_key: context.bpp_uri
-        value: session.bpp_uri
-      - beckn_key: context.location.country.code
-        value: session.country
-      - beckn_key: context.location.city.code
-        value: session.cityCode
-      - beckn_key: context.transaction_id
-        value: session.currentTransactionId
-      - beckn_key: context.message_id
-        value: session.message_id
-      - beckn_key: context.timestamp
-        value: timestamp
-      - beckn_key: context.domain
-        value: session.domain
-      - beckn_key: context.version
-        value: session.version
-      - beckn_key: context.ttl
-        value: session.ttl
-      - beckn_key: context.action
-        value: action
-
-      # - beckn_key: message.catalog.descriptor.name
-      #   value: data.name || session.catalogname
-        
       - beckn_key: context
-        value: data.context
+        value: session
+        compute: buildContext(session, action)
+
       - beckn_key: message
         value: data.message
 
 
+
+
+
+
   init:
     sessionData:
-      - business_key: bap_id
-        extractionPath: context.bap_id
-      - business_key: bap_uri
-        extractionPath: context.bap_uri
-      - business_key: cityCode
-        extractionPath: context.location.city.code || session.cityCode
-      - business_key: countryCode
-        extractionPath: context.location.country.code || session.countryCode
       - business_key: message_id
         extractionPath: context.message_id
 
     mapping:
-      - business_key: context.domain
-        extractionPath: session.domain
-      - business_key: context.version
-        extractionPath: session.version
-      - business_key: context.transaction_id
-        extractionPath: session.transaction_id
-      - business_key: context.message_id
-        extractionPath: context.message_id
-      - business_key: context.bap_id
-        extractionPath: session.bap_id
-      - business_key: context.bap_uri
-        extractionPath: session.bap_uri
-      - business_key: context.action
-        extractionPath: context.action
-      - business_key: context.location.city.code
-        extractionPath: session.cityCode
-      - business_key: context.location.country.code
-        extractionPath: session.countryCode
-      - business_key: context.ttl
-        extractionPath: context.ttl
 
       - business_key: items
         extractionPath: message.order.items
@@ -322,34 +219,9 @@ protocol:
 
   on_init:
     mapping:
-      - beckn_key: context.bap_id
-        value: session.bap_id
-      - beckn_key: context.bap_uri
-        value: session.bap_uri
-      - beckn_key: context.bpp_id
-        value: session.bpp_id
-      - beckn_key: context.bpp_uri
-        value: session.bpp_uri
-      - beckn_key: context.location.country.code
-        value: session.country
-      - beckn_key: context.location.city.code
-        value: session.cityCode
-      - beckn_key: context.transaction_id
-        value: session.currentTransactionId
-      - beckn_key: context.message_id
-        value: session.message_id
-      - beckn_key: context.timestamp
-        value: timestamp
-      - beckn_key: context.domain
-        value: session.domain
-      - beckn_key: context.version
-        value: session.version
-      - beckn_key: context.ttl
-        value: session.ttl
-      - beckn_key: context.action
-        value: action
       - beckn_key: context
-        value: data.context
+        value: session
+        compute: buildContext(session, action)
 
       - beckn_key: message
         value: data.message
@@ -357,39 +229,10 @@ protocol:
 
   confirm:
     sessionData:
-      - business_key: bap_id
-        extractionPath: context.bap_id
-      - business_key: bap_uri
-        extractionPath: context.bap_uri
-      - business_key: cityCode
-        extractionPath: context.location.city.code || session.cityCode
-      - business_key: countryCode
-        extractionPath: context.location.country.code || session.countryCode
       - business_key: message_id
         extractionPath: context.message_id
 
     mapping:
-      - business_key: context.domain
-        extractionPath: session.domain
-      - business_key: context.version
-        extractionPath: session.version
-      - business_key: context.transaction_id
-        extractionPath: session.transaction_id
-      - business_key: context.message_id
-        extractionPath: context.message_id
-      - business_key: context.bap_id
-        extractionPath: session.bap_id
-      - business_key: context.bap_uri
-        extractionPath: session.bap_uri
-      - business_key: context.action
-        extractionPath: context.action
-      - business_key: context.location.city.code
-        extractionPath: session.cityCode
-      - business_key: context.location.country.code
-        extractionPath: session.countryCode
-      - business_key: context.ttl
-        extractionPath: context.ttl
-
       - business_key: items
         extractionPath: message.order.items
 
@@ -398,34 +241,9 @@ protocol:
 
   on_confirm:
     mapping:
-      - beckn_key: context.bap_id
-        value: session.bap_id
-      - beckn_key: context.bap_uri
-        value: session.bap_uri
-      - beckn_key: context.bpp_id
-        value: session.bpp_id
-      - beckn_key: context.bpp_uri
-        value: session.bpp_uri
-      - beckn_key: context.location.country.code
-        value: session.country
-      - beckn_key: context.location.city.code
-        value: session.cityCode
-      - beckn_key: context.transaction_id
-        value: session.currentTransactionId
-      - beckn_key: context.message_id
-        value: session.message_id
-      - beckn_key: context.timestamp
-        value: timestamp
-      - beckn_key: context.domain
-        value: session.domain
-      - beckn_key: context.version
-        value: session.version
-      - beckn_key: context.ttl
-        value: session.ttl
-      - beckn_key: context.action
-        value: action
       - beckn_key: context
-        value: data.context
+        value: session
+        compute: buildContext(session, action)
 
       - beckn_key: message
         value: data.message
@@ -433,39 +251,10 @@ protocol:
 
   update:
     sessionData:
-      - business_key: bap_id
-        extractionPath: context.bap_id
-      - business_key: bap_uri
-        extractionPath: context.bap_uri
-      - business_key: cityCode
-        extractionPath: context.location.city.code || session.cityCode
-      - business_key: countryCode
-        extractionPath: context.location.country.code || session.countryCode
       - business_key: message_id
         extractionPath: context.message_id
 
     mapping:
-      - business_key: context.domain
-        extractionPath: session.domain
-      - business_key: context.version
-        extractionPath: session.version
-      - business_key: context.transaction_id
-        extractionPath: session.transaction_id
-      - business_key: context.message_id
-        extractionPath: context.message_id
-      - business_key: context.bap_id
-        extractionPath: session.bap_id
-      - business_key: context.bap_uri
-        extractionPath: session.bap_uri
-      - business_key: context.action
-        extractionPath: context.action
-      - business_key: context.location.city.code
-        extractionPath: session.cityCode
-      - business_key: context.location.country.code
-        extractionPath: session.countryCode
-      - business_key: context.ttl
-        extractionPath: context.ttl
-
       - business_key: items
         extractionPath: message.order.items
 
@@ -476,70 +265,27 @@ protocol:
 
   on_update:
     mapping:
-      - beckn_key: context.bap_id
-        value: session.bap_id
-      - beckn_key: context.bap_uri
-        value: session.bap_uri
-      - beckn_key: context.bpp_id
-        value: session.bpp_id
-      - beckn_key: context.bpp_uri
-        value: session.bpp_uri
-      - beckn_key: context.location.country.code
-        value: session.country
-      - beckn_key: context.location.city.code
-        value: session.cityCode
-      - beckn_key: context.transaction_id
-        value: session.currentTransactionId
-      - beckn_key: context.message_id
-        value: messageId
-      - beckn_key: context.timestamp
-        value: timestamp
-      - beckn_key: context.domain
-        value: session.domain
-      - beckn_key: context.version
-        value: session.version
-      - beckn_key: context.ttl
-        value: session.ttl
-      - beckn_key: context.action
-        value: action
-
-
       - beckn_key: context
-        value: data.context
+        value: session
+        compute: buildContext(session, action)
 
       - beckn_key: message
         value: data.message
 
+  status:
+    sessionData:
+      - business_key: message_id
+        extractionPath: context.message_id
+
+    mapping:
+      - business_key: message
+        extractionPath: message
+
   on_status:
     mapping:
-      - beckn_key: context.bap_id
-        value: session.bap_id
-      - beckn_key: context.bap_uri
-        value: session.bap_uri
-      - beckn_key: context.bpp_id
-        value: session.bpp_id
-      - beckn_key: context.bpp_uri
-        value: session.bpp_uri
-      - beckn_key: context.location.country.code
-        value: session.country
-      - beckn_key: context.location.city.code
-        value: session.cityCode
-      - beckn_key: context.transaction_id
-        value: session.currentTransactionId
-      - beckn_key: context.message_id
-        value: data.context.message_id
-      - beckn_key: context.timestamp
-        value: timestamp
-      - beckn_key: context.domain
-        value: session.domain
-      - beckn_key: context.version
-        value: session.version
-      - beckn_key: context.ttl
-        value: session.ttl
-      - beckn_key: context.action
-        value: action
       - beckn_key: context
-        value: data.context
+        value: session
+        compute: buildContext(session, action)
 
       - beckn_key: message
         value: data.message

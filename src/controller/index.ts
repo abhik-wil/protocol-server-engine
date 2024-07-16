@@ -260,7 +260,6 @@ export const businessToBecknWrapper = async (req: Request, res: Response) => {
 };
 
 export const businessToBecknMethod = async (body: any) => {
-  body = body ? body : {};
   logger.info("inside businessToBecknMethod controller: ", body);
   try {
     //except target i can fetch rest from my payload
@@ -286,8 +285,10 @@ export const businessToBecknMethod = async (body: any) => {
         transaction_id: transactionId,
       });
       session = await getSession(transactionId);
+      console.log(session, "session");
     } else {
       session = await getSession(transactionId); // session will be premade with beckn to business usecase
+      console.log(session, "session");
 
       if (!session) {
         return {
@@ -309,12 +310,15 @@ export const businessToBecknMethod = async (body: any) => {
     // const protocol = session.protocol[config];
     const mapping = configLoader.getMapping(session.configName);
     const protocol = mapping ? mapping[config] : null;
-
+    // console.log("protocol: ", protocol);
+    // console.log("mapping: ", mapping);
     ////////////// MAPPING/EXTRACTION ////////////////////////
-
+    // console.log(session, type, data, protocol, "logs");
     const { payload: becknPayload, session: updatedSession } =
       createBecknObject(session, type, data, protocol);
 
+    // console.log("becknPayload: ", becknPayload);
+    // console.log("seesion: ", session.bap_uri, session);
     if (!seller) {
       becknPayload.context.bap_uri = `${process.env.SUBSCRIBER_URL}/ondc`;
     }

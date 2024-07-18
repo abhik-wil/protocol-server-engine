@@ -12,7 +12,7 @@ export default class PayloadModule {
     this.domain = domain;
 
     this.create = {
-      context: this.test,
+      context: this.buildContext,
       message: {
         provider: this.createProvider,
         item: this.createItem,

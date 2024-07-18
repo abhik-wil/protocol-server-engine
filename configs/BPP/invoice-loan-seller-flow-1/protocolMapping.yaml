@@ -195,10 +195,22 @@ protocol:
         value: session
         compute: buildContext(session, action)
 
-      - beckn_key: message
-        value: data.message
+      - beckn_key: message.order.items
+        value: data.message.order.items
 
+      - beckn_key: message.order.quote
+        value: data.message.order.quote
 
+      #provider        
+      - beckn_key: message.order.provider.descriptor
+        value: data.loan_provider        ||  session.loan_provider
+
+      - beckn_key: message.order.provider.id
+        value: data.loan_provider_id        ||  session.loan_provider_id
+
+      - beckn_key: message.order.provider.tags
+        value: data.tags                || session.tags
+        compute: buildTags(data.tags    || session.tags,true,true)
 
 
 
@@ -225,6 +237,28 @@ protocol:
 
       - beckn_key: message
         value: data.message
+
+      # #payments
+      # - beckn_key: message.order.payments[0].tags
+      #   value: data.paymentTagsSearch       || session.paymentTagsSearch
+      #   compute: buildTags(data.paymentTagsSearch || session.paymentTagsSearch)
+
+      # - beckn_key: message.order.payments[0].collected_by
+      #   value: data.payment_collectedby || session.collectedBy
+
+      - beckn_key: message.order.cancellation_terms
+        value: data.cancellation_terms || session.cancellation_terms
+
+      #provider        
+      - beckn_key: message.order.provider.descriptor
+        value: data.loan_provider        ||  session.loan_provider
+
+      - beckn_key: message.order.provider.id
+        value: data.loan_provider_id        ||  session.loan_provider_id
+
+      - beckn_key: message.order.provider.tags
+        value: data.tags                || session.tags
+        compute: buildTags(data.tags    || session.tags,true,true)
 
 
   confirm:
@@ -287,5 +321,29 @@ protocol:
         value: session
         compute: buildContext(session, action)
 
-      - beckn_key: message
-        value: data.message
+    
+      - beckn_key: message.order.cancellation_terms
+        value: data.cancellation_terms || session.cancellation_terms
+
+      - beckn_key: message.order.payments
+        value: data.message.order.payments
+
+      - beckn_key: message.order.fulfillments
+        value: data.message.order.fulfillments
+
+      - beckn_key: message.order.items
+        value: data.message.order.items
+
+      - beckn_key: message.order.quote
+        value: data.message.order.quote
+
+      #provider        
+      - beckn_key: message.order.provider.descriptor
+        value: data.loan_provider        ||  session.loan_provider
+
+      - beckn_key: message.order.provider.id
+        value: data.loan_provider_id        ||  session.loan_provider_id
+
+      - beckn_key: message.order.provider.tags
+        value: data.tags                || session.tags
+        compute: buildTags(data.tags    || session.tags,true,true)

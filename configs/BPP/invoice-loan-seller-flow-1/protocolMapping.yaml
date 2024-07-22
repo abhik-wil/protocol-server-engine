@@ -198,6 +198,12 @@ protocol:
       - beckn_key: message.order.items
         value: data.message.order.items
 
+#form transaction id
+      - beckn_key: message.order.items[0].xinput.form.url
+        value: data.message.order.items[0].xinput.form.url && data.message.order.items[0].xinput.form.url +session.formlink+session.transaction_id
+
+
+
       - beckn_key: message.order.quote
         value: data.message.order.quote
 
@@ -259,6 +265,10 @@ protocol:
       - beckn_key: message.order.provider.tags
         value: data.tags                || session.tags
         compute: buildTags(data.tags    || session.tags,true,true)
+
+#form transaction id
+      - beckn_key: message.order.items[0].xinput.form.url
+        value: data.message.order.items[0].xinput.form.url && data.message.order.items[0].xinput.form.url +session.formlink+session.transaction_id
 
 
   confirm:

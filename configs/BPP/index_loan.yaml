@@ -170,6 +170,7 @@ flows:
       currency: INR
       matched: true
       catalogname: ICICI Bank
+      formlink: "?transaction_id="
       loan_provider:
         images:
         - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png

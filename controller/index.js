@@ -35,16 +35,17 @@ const becknToBusiness = (req, res) => {
   const transaction_id = body?.context?.transaction_id;
   const config = body.context.action;
 
-  validateIncommingRequest(body, transaction_id, config, res);
+  validateIncommingRequest(req, transaction_id, config, res);
 };
 
-const validateIncommingRequest = async (body, transaction_id, config, res) => {
+const validateIncommingRequest = async (req, transaction_id, config, res) => {
   try {
     if (IS_VERIFY_AUTH !== false) {
-      if (!(await verifyHeader(body))) {
+      if (!(await verifyHeader(req))) {
         return res.status(401).send(signNack);
       }
     }
+    const body = req.body
 
     let session = null;
     let sessionId = null;

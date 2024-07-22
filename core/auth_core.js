@@ -3,7 +3,9 @@ const {
   isSignatureValid,
 } = require("ondc-crypto-sdk-nodejs");
 
-const LOOKUP_URI = process.env.ondc_LOOKUP_URI,
+const axios = require("axios")
+
+const LOOKUP_URI = process.env.LOOKUP_URI,
   PRIVATE_KEY = process.env.PRIVATE_KEY,
   BAPID = process.env.SUBSCRIBER_ID,
   UNIQUE_KEY = process.env.SUBSCRIBER_UNIQUE_KEY;
@@ -67,7 +69,7 @@ const verifyHeader = async (req) => {
   if(headers === undefined){
     return false
   }
-  const public_key = await getPublicKey(LOOKUP_URI, headers);
+  const public_key = await getPublicKey(headers);
   // logger.info(`Public key retrieved from registry : ${public_key}`);
   // const public_key = security.publickey;
   //Validate the request source against the registry

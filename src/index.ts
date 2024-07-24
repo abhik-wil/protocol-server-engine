@@ -8,10 +8,9 @@ require("dotenv").config();
 import { configLoader } from "./core/loadConfig";
 import { parseBoolean } from "./utils/utils";
 
-import { contextValidation } from "./core/contextValidation";
-import PayloadModule from "./core/payloadModule";
-
-const payloadModule = new PayloadModule("TRV:10");
+// import { contextValidation } from "./core/contextValidation";
+// import PayloadModule from "./core/payloadModule";
+// import ondc from "ondc-payload-module";
 
 const logger = require("./utils/logger").init();
 

@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
+import ondc from "ondc-payload-module";
 const logger = require("../utils/logger").init();
 
 type Config = {
@@ -145,7 +146,13 @@ const createNestedField = (obj: any, path: any, value: any) => {
   currentObj[keys[keys.length - 1]] = value;
 };
 
-const createPayload = (config: any, action: any, data: any, session: any) => {
+const createPayload = (
+  config: any,
+  action: any,
+  data: any,
+  session: any,
+  ondc: any
+) => {
   const payload = {};
   const startPoint = "START";
   const endPoint = "END";
@@ -356,12 +363,13 @@ export const createBecknObject = (
       config.sessionData,
       type,
       data,
-      session
+      session,
+      ondc
     );
 
     session = { ...session, ...updatedSession };
   }
-  const payload = createPayload(config.mapping, type, data, session);
+  const payload = createPayload(config.mapping, type, data, session, ondc);
 
   return { payload, session };
 };

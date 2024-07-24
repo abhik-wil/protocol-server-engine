@@ -285,10 +285,8 @@ export const businessToBecknMethod = async (body: any) => {
         transaction_id: transactionId,
       });
       session = await getSession(transactionId);
-      console.log(session, "session");
     } else {
       session = await getSession(transactionId); // session will be premade with beckn to business usecase
-      console.log(session, "session");
 
       if (!session) {
         return {

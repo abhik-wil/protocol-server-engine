@@ -300,7 +300,7 @@ protocol:
 
     mapping:
       - business_key: items
-        extractionPath: message.order.items
+        extractionPath: message.order
 
       # - business_key: bank_details
       #   extractionPath: message.order.payments[0].params

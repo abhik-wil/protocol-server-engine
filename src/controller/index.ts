@@ -424,7 +424,7 @@ export const businessToBecknMethod = async (body: any) => {
             },
             code: 200,
           });
-        }, 3000);
+        }, 7000);
       });
     } else {
       return {

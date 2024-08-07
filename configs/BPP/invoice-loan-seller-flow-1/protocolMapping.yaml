@@ -200,7 +200,7 @@ protocol:
 
 #form transaction id
       - beckn_key: message.order.items[0].xinput.form.url
-        value: data.message.order.items[0].xinput.form.url && data.message.order.items[0].xinput.form.url +session.formlink+session.transaction_id
+        value: data.message.order.items[0].xinput.form.url && data.message.order.items[0].xinput.form.url +session.transaction_id
 
 
 
@@ -268,7 +268,7 @@ protocol:
 
 #form transaction id
       - beckn_key: message.order.items[0].xinput.form.url
-        value: data.message.order.items[0].xinput.form.url && data.message.order.items[0].xinput.form.url +session.formlink+session.transaction_id
+        value: data.message.order.items[0].xinput.form.url && data.message.order.items[0].xinput.form.url +session.transaction_id
 
 
   confirm:

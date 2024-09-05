@@ -5,7 +5,7 @@
   "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/index.ts",
+    "dev": "nodemon -r dotenv/config src/index.ts dotenv_config_path=.env dotenv_config_debug=true",
     "dev:buyer": "nodemon -r dotenv/config src/index.ts dotenv_config_path=.buyer.mob.env dotenv_config_debug=true",
     "dev:seller": "nodemon -r dotenv/config src/index.ts dotenv_config_path=.seller.mob.env dotenv_config_debug=true",
     "dev:buyer:FIS": "nodemon -r dotenv/config src/index.ts dotenv_config_path=.buyer.FIS.env dotenv_config_debug=true",

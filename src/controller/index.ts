@@ -81,39 +81,39 @@ const validateIncommingRequest = async (
     logger.info("Recieved request: " + JSON.stringify(body));
 
     // const schemaConfig = configLoader.getSchema(session.configName);
-    const schemaConfig = configLoader.getSchema();
+    // const schemaConfig = configLoader.getSchema();
 
-    if (schemaConfig[config]) {
-      const schema = schemaConfig[config];
-      const schemaValidation = await validateSchema(body, schema);
+    // if (schemaConfig[config]) {
+    //   const schema = schemaConfig[config];
+    //   const schemaValidation = await validateSchema(body, schema);
 
-      if (!schemaValidation?.status && schemaValidation?.message) {
-        return res.status(200).send(buildNackPayload(schemaValidation.message));
-      }
-    } else {
-      logger.info(`Schema config missing for ${config}`);
-    }
+    //   if (!schemaValidation?.status && schemaValidation?.message) {
+    //     return res.status(200).send(buildNackPayload(schemaValidation.message));
+    //   }
+    // } else {
+    //   logger.info(`Schema config missing for ${config}`);
+    // }
 
-    const attributeConfig = configLoader.getAttributeConfig(session.configName);
+    // const attributeConfig = configLoader.getAttributeConfig(session.configName);
 
-    if (attributeConfig) {
-      const attrErrors = validateAttributes(
-        body,
-        attributeConfig[config],
-        config
-      );
+    // if (attributeConfig) {
+    //   const attrErrors = validateAttributes(
+    //     body,
+    //     attributeConfig[config],
+    //     config
+    //   );
 
-      if (attrErrors.length) {
-        logger.error("Attribute validation failed: " + attrErrors);
-        // return res
-        //   .status(200)
-        //   .send(buildNackPayload(JSON.stringify(attrErrors)));
-      } else {
-        logger.info("Attribute validation SUCCESS");
-      }
-    } else {
-      logger.info(`Attribute config missing for ${session.configName}`);
-    }
+    //   if (attrErrors.length) {
+    //     logger.error("Attribute validation failed: " + attrErrors);
+    //     // return res
+    //     //   .status(200)
+    //     //   .send(buildNackPayload(JSON.stringify(attrErrors)));
+    //   } else {
+    //     logger.info("Attribute validation SUCCESS");
+    //   }
+    // } else {
+    //   logger.info(`Attribute config missing for ${session.configName}`);
+    // }
 
     res.send(ack);
     handleRequest(body, session, sessionId ?? "");
@@ -224,6 +224,9 @@ const handleRequest = async (
       const { payload: becknPayload, session: updatedSession } =
         createBecknObject(session, action, response, protocol);
       insertSession(updatedSession);
+ 
+      
+  
       let url;
       if (serviceUrl !== undefined) {
         url = `${process.env.BACKEND_SERVER_URL}${serviceUrl}`;
@@ -239,13 +242,14 @@ const handleRequest = async (
     // throw new Error("an error occurred")
   } catch (e) {
     console.log(e);
-    logger.error(JSON.stringify(e));
+    logger.error(e);
   }
 };
 
 export const businessToBecknWrapper = async (req: Request, res: Response) => {
   try {
     const body = req.body;
+    console.log(body);
     const { status, message, code } = (await businessToBecknMethod(
       body
     )) as any;
@@ -301,6 +305,8 @@ export const businessToBecknMethod = async (body: any) => {
     if (SERVER_TYPE === "BAP") {
       session = { ...session, ...data };
     }
+    
+    
 
     ////////////// session validation ////////////////////
 
@@ -345,10 +351,15 @@ export const businessToBecknMethod = async (body: any) => {
       };
       // return res.status(400).send({message:"callback url not provided",success: false})  ---->
     }
+    console.log("payload",becknPayload.context);
+    
+    console.log("url",url);
+    
     if (url[url.length - 1] != "/") {
       //"add / if not exists in bap uri"
       url = url + "/";
     }
+    
 
     ////////////// MAPPING/EXTRACTION ////////////////////////
 
@@ -363,6 +374,10 @@ export const businessToBecknMethod = async (body: any) => {
     //////////////////// SEND TO NETWORK /////////////////////////
     const response = await axios.post(`${url}${type}`, becknPayload, header);
     console.log("response: ", response.data);
+    console.log("error",(becknPayload));
+    console.log(signedHeader);
+    
+      
     //////////////////// SEND TO NETWORK /////////////////////////
 
     /// UPDTTED CALLS ///////
@@ -436,6 +451,8 @@ export const businessToBecknMethod = async (body: any) => {
         },
         code: 200,
       };
+
+      
       // res.send({ updatedSession, becknPayload, becknReponse: response.data });
     }
   } catch (e: any) {

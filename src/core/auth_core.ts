@@ -20,6 +20,7 @@ export async function generateHeader(message: GenericObject) {
   if (!UNIQUE_KEY) {
     throw new Error("UNIQUE_KEY not found in the environment variables");
   }
+  
   const result = await createAuthorizationHeader({
     message: message,
     privateKey: PRIVATE_KEY, //SIGNING private key

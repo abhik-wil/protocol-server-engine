@@ -1,0 +1,6 @@
+[2024-07-01T09:11:17.556Z] [[32minfo[39m]: Inside schema validation service for search api protocol server
+[2024-07-01T09:11:18.514Z] [[32minfo[39m]: Schema validation : SUCCESS
+[2024-07-01T09:11:18.515Z] [[32minfo[39m]: Attribute config missing for undefined
+[2024-07-01T09:11:18.516Z] [[32minfo[39m]: Recieved request: {"bap_id":"fis-buyer-staging.ondc.org","bpp_id":"stageapi.faircent.com","bpp_uri":"https://pramaan.ondc.org/beta/staging/mock/seller","location":{"country":{"code":"IND"},"city":{"code":"*"}},"transaction_id":"02ecdb9a-29eb-433c-9641-a0b4fe6c1a08","message_id":"a77c2d38-607c-42ee-a90e-6364ff179b77","timestamp":"2024-07-01T08:46:44.374Z","domain":"ONDC:FIS12","version":"2.1.0","ttl":"PT10M","action":"search","bap_uri":"https://9fbc-182-156-19-250.ngrok-free.app/ondc"}
+[2024-07-01T09:11:18.523Z] [[31merror[39m]: {}
+[2024-07-01T09:15:09.620Z] [[32minfo[39m]: inside businessToBecknMethod controller: 

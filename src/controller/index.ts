@@ -26,6 +26,10 @@ import { Request, Response } from "express";
 const ASYNC_MODE = "ASYNC";
 const SYNC_MODE = "SYNC";
 
+export const getsession = async (req : Request,res : Response)=>{
+  res.send(await cache.get())
+ }
+
 export const becknToBusiness = (req: Request, res: Response) => {
   const body = req.body;
   const transaction_id = body?.context?.transaction_id;
@@ -54,19 +58,24 @@ const validateIncommingRequest = async (
       session = await getSession(transaction_id);
 
       const configObject = configLoader.getConfig();
-      const configName = dynamicFlow(
-        body,
-        configObject[SERVER_TYPE]["flow_selector"][config]
-      );
+      
+      if(!session?.configName){
+        var configName = dynamicFlow(
+          body,
+          configObject[SERVER_TYPE]["flow_selector"][config]
+        )
+      }
+     
 
       if (!session) {
-        await generateSession({
+        const sessionObject = {
           version: body.context.version,
           country: body?.context?.location?.country?.code,
           cityCode: body?.context?.location?.city?.code,
           configName: configName || process.env.flow,
-          transaction_id: transaction_id,
-        });
+          transaction_id: transaction_id
+      }
+        await generateSession(sessionObject);
         session = await getSession(transaction_id);
       }
     } else {
@@ -150,7 +159,7 @@ const handleRequest = async (
         }
       });
 
-      if (isUnsolicited) {
+      if (isUnsolicited ) {
         config = action;
       }
 
@@ -211,33 +220,113 @@ const handleRequest = async (
           response,
         });
       }
-    } else {
-      const mapping = configLoader.getMapping(session.configName);
-      const protocol = mapping ? mapping[action] : null;
+    } 
+    else {
+      // const mapping = configLoader.getMapping(session.configName);
+      // const protocol = mapping ? mapping[action] : null;
 
-      let { callback, serviceUrl, sync } = dynamicReponse(
-        response,
-        session.api[action]
-      );
-      callback = callback ? callback : action;
+      // let { callback, serviceUrl, sync } = dynamicReponse(
+      //   response,
+      //   session.api[action]
+      // );
+      // callback = callback ? callback : action;
 
-      const { payload: becknPayload, session: updatedSession } =
-        createBecknObject(session, action, response, protocol);
-      insertSession(updatedSession);
+      // const { payload: becknPayload, session: updatedSession } =
+      //   createBecknObject(session, action, response, protocol);
+      // insertSession(updatedSession);
  
       
   
-      let url;
-      if (serviceUrl !== undefined) {
-        url = `${process.env.BACKEND_SERVER_URL}${serviceUrl}`;
-      } else {
-        url = `${process.env.BACKEND_SERVER_URL}/${callback}`;
+      // let url;
+      // if (serviceUrl !== undefined) {
+      //   url = `${process.env.BACKEND_SERVER_URL}${serviceUrl}`;
+      // } else {
+      //   url = `${process.env.BACKEND_SERVER_URL}/${callback}`;
+      // }
+      // const mockResponse = await axios.post(`${url}`, becknPayload);
+      // if (mockResponse)
+      //   if (sync) {
+      //     businessToBecknMethod(mockResponse.data);
+      //   }
+    
+    // if (is_buyer || session.ui) {
+    // if (is_buyer || 1) {
+
+    let config = null;
+    let isUnsolicited = true;
+
+    // if call is unsolicated
+    // session.calls.map((call) => { // sare configs se match krrha h this step won't be necessary 
+    //   if (call.callback?.message_id === response.context.message_id || call.unsolicated === false) {
+    //     config = call.callback?.config;
+    //     isUnsolicited = false;
+    //   }
+    // });
+    
+
+    if (isUnsolicited || true) {
+      config = action;
+    }
+
+    console.log("config >>>>>", config);
+
+    const mapping = configLoader.getMapping(session.configName);
+    const protocol = mapping ? mapping[config] : null;
+        if(protocol == undefined){
+      throw new Error("Protocol  is undefined")
+    }
+    const { result: businessPayload, session: updatedSession } =
+      extractBusinessData(action, response, session, protocol);
+
+    let urlEndpint = null;
+    let mode = ASYNC_MODE;
+
+    // search , on_search etc map 
+    // storing payload and endpoint nikalra h kidhar hit krna h 
+    const updatedCalls = updatedSession.calls.map((call: any) => {
+      // unsolicated check if message id not found
+      if (isUnsolicited && call.callback.config === action) {
+        call.callback.unsolicited = [
+          ...(call.callback.unsolicited || []),
+          response,
+        ];
+        urlEndpint = call.callback.unsolicitedEndpoint;
       }
-      const mockResponse = await axios.post(`${url}`, becknPayload);
-      if (mockResponse)
-        if (sync) {
-          businessToBecknMethod(mockResponse.data);
-        }
+
+      if (call.callback?.message_id === response.context.message_id || call.unsolicated === false) {
+        call.callback.becknPayload = [
+          ...(call.callback.becknPayload || []), // storing payload
+          response,
+        ];
+        call.callback.businessPayload = [
+          ...(call.callback.businessPayload || []),
+          businessPayload,
+        ];
+        urlEndpint = call.callback.endpoint;
+        mode = call?.mode || ASYNC_MODE;
+      }
+
+      return call;
+    });
+
+    updatedSession.calls = updatedCalls;
+
+    insertSession(updatedSession);
+
+    if (updatedSession?.schema) {
+      delete updatedSession.schema;
+    }
+
+    logger.info("mode>>>>>>>>> " + mode);
+    if (mode === ASYNC_MODE) {
+      await axios.post(`${process.env.BACKEND_SERVER_URL}/${urlEndpint}`, {
+        businessPayload, // minified response of response || extract method in buyer mock works on this payload extracts from business payload
+        updatedSession, // request ayi session data kuch value update kii to buyer mock m sync krne  k liye 
+        messageId, // message id <omit>
+        sessionId, // protocol server ki transaction id useless <omit>
+        response, // response network se aya h || copy payload krke functionality h agr user full payload dekhna chahta h 
+      });
+    }
     }
     // throw new Error("an error occurred")
   } catch (e) {
@@ -249,7 +338,6 @@ const handleRequest = async (
 export const businessToBecknWrapper = async (req: Request, res: Response) => {
   try {
     const body = req.body;
-    console.log(body);
     const { status, message, code } = (await businessToBecknMethod(
       body
     )) as any;
@@ -267,13 +355,9 @@ export const businessToBecknMethod = async (body: any) => {
   logger.info("inside businessToBecknMethod controller: ", body);
   try {
     //except target i can fetch rest from my payload
-    let { type, config, data, transactionId, target, configName } = body;
+    let { type, config, data, transactionId, target, configName,ui } = body;
     let seller = false;
     if (SERVER_TYPE === "BPP") {
-      (data = body),
-        (transactionId = data.context.transaction_id),
-        (type = data.context.action),
-        (config = type);
       seller = true;
     }
 
@@ -317,12 +401,10 @@ export const businessToBecknMethod = async (body: any) => {
     // console.log("protocol: ", protocol);
     // console.log("mapping: ", mapping);
     ////////////// MAPPING/EXTRACTION ////////////////////////
-    // console.log(session, type, data, protocol, "logs");
+
     const { payload: becknPayload, session: updatedSession } =
       createBecknObject(session, type, data, protocol);
 
-    // console.log("becknPayload: ", becknPayload);
-    // console.log("seesion: ", session.bap_uri, session);
     if (!seller) {
       becknPayload.context.bap_uri = `${process.env.SUBSCRIBER_URL}/ondc`;
     }
@@ -351,10 +433,6 @@ export const businessToBecknMethod = async (body: any) => {
       };
       // return res.status(400).send({message:"callback url not provided",success: false})  ---->
     }
-    console.log("payload",becknPayload.context);
-    
-    console.log("url",url);
-    
     if (url[url.length - 1] != "/") {
       //"add / if not exists in bap uri"
       url = url + "/";
@@ -372,12 +450,9 @@ export const businessToBecknMethod = async (body: any) => {
     const header = { headers: { Authorization: signedHeader } };
 
     //////////////////// SEND TO NETWORK /////////////////////////
+
     const response = await axios.post(`${url}${type}`, becknPayload, header);
-    console.log("response: ", response.data);
-    console.log("error",(becknPayload));
-    console.log(signedHeader);
-    
-      
+
     //////////////////// SEND TO NETWORK /////////////////////////
 
     /// UPDTTED CALLS ///////

@@ -23,7 +23,6 @@ configLoader
   .init()
   .then((data: any) => {
     logger.info("Config loaded successfully.....", data);
-    console.log(data.BAP.flows);
     
 
     if (USE_DB) {

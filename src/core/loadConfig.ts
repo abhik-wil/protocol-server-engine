@@ -17,7 +17,7 @@ class ConfigLoader {
     try {
       if (localConfig) {
         const config = yaml.parse(
-          fs.readFileSync(path.join(__dirname, "../configs/index.yaml"), "utf8")
+          fs.readFileSync(path.join(__dirname, "../../configs/index.yaml"), "utf8")
         );
 
         const schema = await $RefParser.dereference(config);
@@ -33,6 +33,8 @@ class ConfigLoader {
         }
 
         const response = await axios.get(url);
+     
+        
 
         if (response.data.version !== process.env.VERSION) {
           throw new Error(

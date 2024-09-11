@@ -1,4 +1,0 @@
-BAP:
-  $ref: ./configs/BAP/index.yaml
-BPP:
-  $ref: ./configs/BPP/index.yaml 

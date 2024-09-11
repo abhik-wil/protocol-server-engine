@@ -22,7 +22,8 @@ app.use(express.json());
 configLoader
   .init()
   .then((data: any) => {
-    logger.info("Config loaded successfully.");
+    logger.info("Config loaded successfully.....", data);
+    
 
     if (USE_DB) {
       connectDB();

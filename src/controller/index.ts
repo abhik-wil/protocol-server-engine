@@ -16,7 +16,7 @@ const IS_SYNC = parseBoolean(process.env.BUSINESS_SERVER_IS_SYNC);
 import { validateSchema } from "../core/schema";
 const SERVER_TYPE = process.env.SERVER_TYPE;
 const PROTOCOL_SERVER = process.env.PROTOCOL_SERVER;
-const logger = require("../utils/logger").init();
+const logger = require("../utils/logger");
 import { signNack, errorNack, ack } from "../utils/responses";
 import { dynamicReponse, dynamicFlow } from "../core/operations/main";
 import { configLoader } from "../core/loadConfig";

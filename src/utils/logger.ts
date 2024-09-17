@@ -1,9 +1,43 @@
-import { createLogger, format, transports } from "winston";
-require("winston-daily-rotate-file");
-const { combine, timestamp, printf, colorize } = format;
-// const config = require("./config");
+import winston, { format, transports } from "winston"
+import LokiTransport from "winston-loki"
+import "dotenv/config"
 
 var logger: any;
+
+const commonOptions: winston.LoggerOptions = {
+  level: "info",
+  format: winston.format.combine(
+    winston.format.printf(({ level, message }) => {
+      return `[${level.toUpperCase()}]: ${message}`
+    }),
+  ),
+}
+
+let config: winston.LoggerOptions = {
+  transports: [new winston.transports.Console()],
+}
+
+const envLocation = process.env.NODE_ENV || "dev"
+
+if (["dev", "staging", "production"].includes(envLocation)) {
+  console.log("here")
+
+  config = {
+    transports: [
+      new LokiTransport({
+        host: process.env.LOKI_HOST||"http://host.docker.internal:3100" as string,
+        labels: { app: process.env.LOKI_APP_NAME || `infra_${envLocation}` },
+        json: true,
+        format: format.json(),
+        replaceTimestamp: true,
+        onConnectionError: (err: any) => logger.error(err),
+      }),
+      new transports.Console({
+        format: format.combine(format.simple(), format.colorize()),
+      }),
+    ],
+  }
+}
 
 function init() {
   if (!logger) {
@@ -13,34 +47,9 @@ function init() {
 }
 
 function getLogger() {
-  const myFormat = printf(({ level, message, timestamp }) => {
-    return `[${timestamp}] [${level}]: ${message}`;
-  });
-  // const log = config.getLog();
-  logger = createLogger({
-    level: `{
-      log: {
-        level: "DEBUG",
-        output_type: "file",
-        out_file: "/logs/log_file.log",
-      },
-    }`,
-
-    format: combine(timestamp(), colorize(), myFormat),
-    transports: [
-      new transports.Console({
-        level: "debug",
-      }),
-      //   new transports.DailyRotateFile({
-      //     filename: "log_report",
-      //     datePattern: "YYYY-MM-DD",
-      //     zippedArchive: true,
-      //     level: "info",
-      //   }),
-      new transports.Console(),
-    ],
-  });
+  logger = winston.createLogger({ ...commonOptions, ...config })
   return logger;
+  
 }
 
 module.exports = { init };

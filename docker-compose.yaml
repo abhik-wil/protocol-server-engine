@@ -1,0 +1,7 @@
+version: '3.7'
+
+services:
+  protocol-server-engine:
+      build: ./
+      ports:
+        - "80:80"

@@ -1,4 +1,4 @@
-const logger = require("../utils/logger").init();
+const logger = require("../utils/logger");
 
 export default class PayloadModule {
   domain: string;

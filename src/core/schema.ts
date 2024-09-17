@@ -8,7 +8,7 @@ import { formatted_error } from "../utils/utils";
 
 addFormats(ajv);
 require("ajv-errors")(ajv);
-const logger = require("../utils/logger").init();
+const logger = require("../utils/logger");
 import { schemaNack } from "../utils/responses";
 // logger = log.init();
 

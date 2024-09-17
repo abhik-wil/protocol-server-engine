@@ -4,7 +4,6 @@ import { router } from "./router/router";
 const app = express();
 import connectDB from "./core/db";
 require("dotenv").config();
-
 import { configLoader } from "./core/loadConfig";
 import { parseBoolean } from "./utils/utils";
 
@@ -12,7 +11,7 @@ import { parseBoolean } from "./utils/utils";
 // import PayloadModule from "./core/payloadModule";
 // import ondc from "ondc-payload-module";
 
-const logger = require("./utils/logger").init();
+const logger = require("./utils/logger");
 
 const USE_DB = parseBoolean(process.env.USE_DB);
 const PORT = process.env.PORT;

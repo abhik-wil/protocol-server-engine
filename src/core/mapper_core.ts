@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
 import ondc from "ondc-payload-module";
-const logger = require("../utils/logger").init();
+const logger = require("../utils/logger");
 
 type Config = {
   type?: string;

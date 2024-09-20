@@ -6,8 +6,9 @@ import {
   becknToBusiness,
   businessToBecknWrapper,
   updateSession,
-  getsession
+  getsession,
 } from "../controller/index";
+const logger = require("../utils/logger").init();
 
 // buss > beckn
 router.post("/createPayload", businessToBecknWrapper);
@@ -18,7 +19,9 @@ router.post("/ondc/:method", becknToBusiness);
 router.post("/updateSession", updateSession);
 
 router.get("/health", (req: Request, res: Response) => {
+  logger.info("/health api controller");
   res.send({ status: "working" });
+  logger.info("/health api executed");
 });
 
 router.get("/session", getsession);

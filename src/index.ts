@@ -22,8 +22,7 @@ app.use(express.json());
 configLoader
   .init()
   .then((data: any) => {
-    logger.info("Config loaded successfully.....", data);
-    
+    logger.info(`Config loaded successfully.....`, { uuid: "asdad" });
 
     if (USE_DB) {
       connectDB();

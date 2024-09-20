@@ -1,4 +1,5 @@
 import { createLogger, format, transports } from "winston";
+import LokiTransport from "winston-loki";
 require("winston-daily-rotate-file");
 const { combine, timestamp, printf, colorize } = format;
 // const config = require("./config");
@@ -13,31 +14,30 @@ function init() {
 }
 
 function getLogger() {
-  const myFormat = printf(({ level, message, timestamp }) => {
-    return `[${timestamp}] [${level}]: ${message}`;
+  const myFormat = printf(({ level, message, timestamp, uuid }) => {
+    return `[${uuid}] [${timestamp}] [${level}]: ${message}`;
   });
   // const log = config.getLog();
   logger = createLogger({
-    level: `{
-      log: {
-        level: "DEBUG",
-        output_type: "file",
-        out_file: "/logs/log_file.log",
-      },
-    }`,
-
+    level: process.env.LOG_LEVEL || "info",
     format: combine(timestamp(), colorize(), myFormat),
     transports: [
-      new transports.Console({
-        level: "debug",
+      new LokiTransport({
+        host: process.env.LOKI_HOST as string,
+        labels: {
+          app:
+            process.env.LOKI_APP_NAME ||
+            `infra_dev
+          `,
+        },
+        json: true,
+        format: format.json(),
+        replaceTimestamp: true,
+        onConnectionError: (err: any) => logger.error(err),
       }),
-      //   new transports.DailyRotateFile({
-      //     filename: "log_report",
-      //     datePattern: "YYYY-MM-DD",
-      //     zippedArchive: true,
-      //     level: "info",
-      //   }),
-      new transports.Console(),
+      new transports.Console({
+        format: combine(timestamp(), colorize(), myFormat),
+      }),
     ],
   });
   return logger;

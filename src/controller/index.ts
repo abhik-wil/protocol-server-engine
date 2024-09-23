@@ -312,7 +312,7 @@ export const businessToBecknWrapper = async (req: Request, res: Response) => {
   logger.info("/createPayload api controller", { uuid: logID });
   try {
     const body = req.body;
-    logger.debug(`/createPayload api payload ${JSON.parse(body)}`, {
+    logger.debug(`/createPayload api payload ${JSON.stringify(body)}`, {
       uuid: logID,
     });
     const { status, message, code } = (await businessToBecknMethod(

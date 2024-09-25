@@ -16,15 +16,18 @@ class ConfigLoader {
   async init() {
     try {
       if (localConfig) {
-        const config = yaml.parse(
-          fs.readFileSync(path.join(__dirname, "../../configs/index.yaml"), "utf8")
-        );
+        const localConfigFileName = process.env.CONFIG_FILE_NAME;
 
-        const schema = await $RefParser.dereference(config);
+        if (!localConfigFileName) {
+          throw new Error("Env variable 'CONFIG_FILE_NAME' not found");
+        }
+        const schema = await $RefParser.dereference(
+          `protocol-server-config/build/${localConfigFileName}`
+        );
 
         this.config = schema;
 
-        return;
+        return schema;
       } else {
         const url = process.env.config_url;
 
@@ -33,8 +36,6 @@ class ConfigLoader {
         }
 
         const response = await axios.get(url);
-     
-        
 
         if (response.data.version !== process.env.VERSION) {
           throw new Error(

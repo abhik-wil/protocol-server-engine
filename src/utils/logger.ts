@@ -7,7 +7,7 @@ const { combine, timestamp, printf, colorize } = format;
 var logger: any;
 
 function init() {
-  if (!logger) {
+  if (logger == undefined) {
     getLogger();
   }
   return logger;
@@ -17,7 +17,8 @@ function getLogger() {
   const myFormat = printf(({ level, message, timestamp, uuid }) => {
     return `[${uuid}] [${timestamp}] [${level}]: ${message}`;
   });
-  // const log = config.getLog();
+  
+if(process.env.USE_LOKI){
   logger = createLogger({
     level: process.env.LOG_LEVEL || "info",
     format: combine(timestamp(), colorize(), myFormat),
@@ -40,6 +41,25 @@ function getLogger() {
       }),
     ],
   });
+}else{
+  logger = createLogger({
+    level: `{
+      log: {
+        level: "DEBUG",
+        output_type: "file",
+        out_file: "/logs/log_file.log",
+      },
+    }`,
+
+    format: combine(timestamp(), colorize(), myFormat),
+    transports: [
+      new transports.Console({
+        level: "debug",
+      }),
+      new transports.Console(),
+    ],
+  });
+}
   return logger;
 }
 

@@ -77,7 +77,12 @@ class ConfigLoader {
   }
 
   getAttributeConfig(configName: string) {
-    return this.config.attributes[configName];
+    try{
+      return this.config?.attributes[configName];
+    }
+    catch(err){
+      return false
+    }
   }
 }
 

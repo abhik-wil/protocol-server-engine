@@ -1,6 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 import ondc from "ondc-payload-module";
 const logger = require("../utils/logger").init();
+const SERVER_TYPE  = process.env.SERVER_TYPE
 
 type Config = {
   type?: string;
@@ -41,7 +42,7 @@ const buildTags = (tags: any) => {
 
 const buildContext = (session: any, action: any) => {
   console.log("buiding context");
-  const contextConfig = [
+  const contextConfig_buyer = [
     {
       beckn_key: "bap_id",
       value: "session.bap_id",
@@ -70,10 +71,10 @@ const buildContext = (session: any, action: any) => {
       beckn_key: "transaction_id",
       value: "session.currentTransactionId",
     },
-    // {
-    //   beckn_key: "message_id",
-    //   value: "",
-    // },
+    {
+      beckn_key: "message_id",
+      value: "uuidv4()",
+    },
     {
       beckn_key: "timestamp",
       value: "new Date().toISOString()",
@@ -95,9 +96,63 @@ const buildContext = (session: any, action: any) => {
       value: "action",
     },
   ];
-  let context: any = {
-    message_id: uuidv4(),
-  };
+
+  const contextConfig_seller = [
+    {
+      beckn_key: "bap_id",
+      value: "session.bap_id",
+    },
+    {
+      beckn_key: "bap_uri",
+      value: "session.bap_uri",
+    },
+    {
+      beckn_key: "bpp_id",
+      value: "session.bpp_id",
+    },
+    {
+      beckn_key: "bpp_uri",
+      value: "session.bpp_uri",
+    },
+    {
+      beckn_key: "location.country.code",
+      value: "session.country",
+    },
+    {
+      beckn_key: "location.city.code",
+      value: "session.cityCode",
+    },
+    {
+      beckn_key: "transaction_id",
+      value: "session.currentTransactionId",
+    },
+    {
+      beckn_key: "message_id",
+      value: "session.message_id",
+    },
+    {
+      beckn_key: "timestamp",
+      value: "new Date().toISOString()",
+    },
+    {
+      beckn_key: "domain",
+      value: "session.domain",
+    },
+    {
+      beckn_key: "version",
+      value: "session.version",
+    },
+    {
+      beckn_key: "ttl",
+      value: "session.ttl",
+    },
+    {
+      beckn_key: "action",
+      value: "action",
+    },
+  ];
+  const context = {};
+  const contextConfig = SERVER_TYPE === "BPP" ? contextConfig_seller : contextConfig_buyer
   contextConfig.map((item) => {
     try {
       // if (eval(item.value))

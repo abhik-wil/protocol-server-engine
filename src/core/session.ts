@@ -6,7 +6,7 @@ import $RefParser from "@apidevtools/json-schema-ref-parser";
 import { parseBoolean } from "../utils/utils";
 import { configLoader } from "./loadConfig";
 const localConfig = parseBoolean(process.env.localConfig);
-const SERVER_TYPE = process.env.SERVER_TYPE;
+const SERVER_TYPE = process.env.SERVER_TYPE as string;
 
 export const insertSession = async (session: any) => {
   await cache.set(session.transaction_id, session, 86400);
@@ -48,7 +48,7 @@ const getConfigBasedOnFlow = async (flowId: string) => {
   return new Promise(async (resolve, reject) => {
     try {
       // this.config = await loadConfig();
-      const config = (await loadConfig()) as any;
+      const config = configLoader.getConfig()[SERVER_TYPE];
       let filteredProtocol = null;
       let filteredCalls = null;
       let filteredDomain = null;

@@ -1,6 +1,6 @@
 import axios from "axios";
 import { parseBoolean } from "../utils/utils";
-const SERVER_TYPE = process.env.SERVER_TYPE;
+const SERVER_TYPE = process.env.SERVER_TYPE as any;
 const localConfig: boolean | null = parseBoolean(process.env.localConfig);
 import fs from "fs";
 import yaml from "yaml";
@@ -21,13 +21,13 @@ class ConfigLoader {
         if (!localConfigFileName) {
           throw new Error("Env variable 'CONFIG_FILE_NAME' not found");
         }
-        const schema = await $RefParser.dereference(
-          `protocol-server-config/build/${localConfigFileName}`
+
+        const schema : any = await $RefParser.dereference(
+          `./configs/${localConfigFileName}`
         );
 
         this.config = schema;
-
-        return schema;
+        return schema
       } else {
         const url = process.env.config_url;
 
